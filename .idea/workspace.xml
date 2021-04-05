@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/templates/auth/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/templates/auth/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PasswordManager/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +37,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/PasswordManager/templates/auth/register.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1qi37baVaDgXXf9vXMWGPI8Qskd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -62,10 +62,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\PasswordManager" />
+      <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\flaskr" />
     </key>
   </component>
-  <component name="RunManager" selected="Flask server.DisserationPasswordManager">
+  <component name="RunManager" selected="Flask server.Flask (PasswordManager/__init__.py)">
     <configuration name="DisserationPasswordManager" type="Python.FlaskServer">
       <module name="DisserationPasswordManager" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -75,6 +77,21 @@
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (PasswordManager/__init__.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="DisserationPasswordManager" />
+      <option name="target" value="$PROJECT_DIR$/PasswordManager/__init__.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -98,7 +115,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flask server.Flask (app.py)" />
+        <item itemvalue="Flask server.Flask (PasswordManager/__init__.py)" />
       </list>
     </recent_temporary>
   </component>
@@ -111,6 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617548417775</updated>
       <workItem from="1617548435506" duration="2206000" />
+      <workItem from="1617645872502" duration="5693000" />
     </task>
     <servers />
   </component>
@@ -130,6 +148,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DisserationPasswordManager$Flask__PasswordManager___init___py_.coverage" NAME="Flask (PasswordManager/__init__.py) Coverage Results" MODIFIED="1617646479343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1617550680476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
