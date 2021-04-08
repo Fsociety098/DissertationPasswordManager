@@ -24,10 +24,10 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
+    # homepage
     @app.route('/home')
     def home():
-        return render_template('base.html')
+        return render_template('index.html')
 
     from . import db
     db.init_app(app)
@@ -38,4 +38,5 @@ def create_app(test_config=None):
     from . import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
+
     return app
