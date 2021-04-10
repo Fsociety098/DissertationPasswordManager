@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_blog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
