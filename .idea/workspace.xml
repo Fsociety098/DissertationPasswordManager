@@ -2,86 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/DisserationPasswordManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DisserationPasswordManager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e212e508-d943-42a9-a6aa-bfd64536c974.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e212e508-d943-42a9-a6aa-bfd64536c974.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_argcomplete.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_argcomplete.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_code/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_code/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_code/code.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_code/code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_code/source.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_code/source.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_io/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_io/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_io/saferepr.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_io/saferepr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_io/terminalwriter.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_io/terminalwriter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_io/wcwidth.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_io/wcwidth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_version.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/_version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/assertion/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/assertion/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/assertion/rewrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/assertion/rewrite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/assertion/truncate.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/assertion/truncate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/assertion/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/assertion/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/cacheprovider.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/cacheprovider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/capture.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/capture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/argparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/argparsing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/findpaths.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/config/findpaths.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/debugging.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/debugging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/deprecated.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/deprecated.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/doctest.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/doctest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/faulthandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/faulthandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/fixtures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/freeze_support.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/freeze_support.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/helpconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/helpconfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/hookspec.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/hookspec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/junitxml.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/junitxml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/logging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/mark/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/mark/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/mark/expression.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/mark/expression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/mark/structures.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/mark/structures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/monkeypatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/monkeypatch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/nodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/nodes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/nose.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/nose.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/outcomes.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/outcomes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/pastebin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/pastebin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/pathlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/pathlib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/pytester.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/pytester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/pytester_assertions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/pytester_assertions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/python.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/python.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/python_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/python_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/recwarn.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/recwarn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/reports.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/reports.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/setuponly.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/setuponly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/setupplan.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/setupplan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/skipping.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/skipping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/stepwise.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/stepwise.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/store.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/store.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/terminal.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/terminal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/threadexception.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/threadexception.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/timing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/timing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/tmpdir.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/tmpdir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/unittest.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/unittest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/unraisableexception.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/unraisableexception.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/warning_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/warning_types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/warnings.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/_pytest/warnings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/INSTALLER" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/INSTALLER" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/METADATA" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/METADATA" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/RECORD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/WHEEL" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/WHEEL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/entry_points.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/entry_points.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest-6.2.3.dist-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytest/collect.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytest/collect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/py.test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/py.test.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/pytest.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pytest.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_blog.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +63,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -143,7 +72,51 @@
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\flaskr" />
     </key>
   </component>
-  <component name="RunManager" selected="Flask server.Flask (PasswordManager/__init__.py)">
+  <component name="RunManager" selected="Python tests.pytest for test_blog.test_index">
+    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DisserationPasswordManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/conftest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_blog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DisserationPasswordManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_blog.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="DisserationPasswordManager" type="Python.FlaskServer">
       <module name="DisserationPasswordManager" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -189,8 +162,29 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_blog.test_index" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="DisserationPasswordManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_blog.test_index&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_blog.test_index" />
+        <item itemvalue="Python.conftest" />
+        <item itemvalue="Python.test_blog" />
+        <item itemvalue="Flask server.Flask" />
         <item itemvalue="Flask server.Flask (PasswordManager/__init__.py)" />
       </list>
     </recent_temporary>
@@ -211,7 +205,9 @@
       <workItem from="1617909851614" duration="3855000" />
       <workItem from="1618075790035" duration="37000" />
       <workItem from="1618075904783" duration="20000" />
-      <workItem from="1618153179978" duration="254000" />
+      <workItem from="1618153179978" duration="7258000" />
+      <workItem from="1618241202879" duration="7179000" />
+      <workItem from="1618333826487" duration="2774000" />
     </task>
     <servers />
   </component>
@@ -231,7 +227,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DisserationPasswordManager$conftest.coverage" NAME="conftest Coverage Results" MODIFIED="1618250481792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$Flask__PasswordManager___init___py_.coverage" NAME="Flask (PasswordManager/__init__.py) Coverage Results" MODIFIED="1617646479343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1617550680476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/DisserationPasswordManager$test_blog.coverage" NAME="test_blog Coverage Results" MODIFIED="1618250164721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/DisserationPasswordManager$pytest_for_test_blog_test_index.coverage" NAME="pytest for test_blog.test_index Coverage Results" MODIFIED="1618259852768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>

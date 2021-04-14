@@ -27,7 +27,7 @@ def create_app(test_config=None):
         pass
 
     # homepage
-    @app.route('/home')
+    @app.route('/')
     def home():
         return render_template('index.html')
 
@@ -37,6 +37,7 @@ def create_app(test_config=None):
     from PasswordManager import auth
     app.register_blueprint(auth.bp)
 
+    # index page
     from PasswordManager import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
