@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DisserationPasswordManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DisserationPasswordManager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e212e508-d943-42a9-a6aa-bfd64536c974.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e212e508-d943-42a9-a6aa-bfd64536c974.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PasswordManager/static/images/placeholder.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_blog.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_blog.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +63,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\PasswordManager\static\images" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\PasswordManager" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\flaskr" />
@@ -208,6 +205,9 @@
       <workItem from="1618153179978" duration="7258000" />
       <workItem from="1618241202879" duration="7179000" />
       <workItem from="1618333826487" duration="2774000" />
+      <workItem from="1618422611980" duration="5441000" />
+      <workItem from="1618497605582" duration="9480000" />
+      <workItem from="1618517986319" duration="5842000" />
     </task>
     <servers />
   </component>
