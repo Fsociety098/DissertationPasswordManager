@@ -1,5 +1,5 @@
 import functools
-
+import re
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
@@ -13,30 +13,38 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
-        username = request.form['username']
+        fName = request.form['fName']
+        userEmail = request.form['userEmail']
+        userConfirm = request.form['userConfirm']
+        secureKey = request.form['secureKey']
         password = request.form['password']
+        passwordConfirm = request.form['passwordConfirm']
         db = get_db()
         error = None
 
-        if not username:
-            error = 'Username is required.'
-        elif not password:
-            error = 'Password is required.'
+        if not fName:
+            error = 'Full name is required'
+        elif not userEmail:
+            error = 'Email Address is required'
+        elif not userConfirm:
+            error = 'Confirm Email Address is required'
+        elif userEmail != userConfirm:
+            error = 'Your emails do not match'
+        elif not passwordConfirm:
+            error = 'Please confirm your Password'
         elif db.execute(
-                'SELECT id FROM user WHERE username = ?', (username,)
+                'SELECT id FROM user WHERE userEmail = ?', (userEmail,)
         ).fetchone() is not None:
-            error = 'User {} is already registered.'.format(username)
+            error = 'User {} is already registered.'.format(userEmail)
 
         if error is None:
             db.execute(
-                'INSERT INTO user (username, password) VALUES (?, ?)',
-                (username, generate_password_hash(password))
+                'INSERT INTO user (fName, userEmail, secureKey, password) VALUES (?, ?, ?, ?)',
+                (fName, userEmail, generate_password_hash(secureKey), generate_password_hash(password))
             )
             db.commit()
             return redirect(url_for('auth.login'))
-
         flash(error)
-
     return render_template('auth/register.html')
 
 

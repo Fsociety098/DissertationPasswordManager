@@ -1,15 +1,60 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Custom -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-{% block header %}
-  <h1>{% block title %}Register{% endblock title %}</h1>
-{% endblock header %}
+</head>
+<body class="text-center body-signinout">
 
-{% block content %}
-  <form method="post">
-    <label for="username">Username</label>
-    <input name="username" id="username">
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password">
-    <input type="submit" value="Register">
-  </form>
-{% endblock content %}
+<main class="form-signinout">
+
+    <form method="post">
+        <img class="mb-4" src="/static/images/placeholder.png" alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Register</h1>
+
+        <div class="form-floating">
+            {% for message in get_flashed_messages() %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="fName" name="fName" placeholder="Joe Bloggs" value="{{ request.form['fName'] }}">
+            <label for="floatingInput">Full Name</label>
+        </div>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="name@example.com" value="{{ request.form['userEmail'] }}">
+            <label for="floatingInput">Email Address</label>
+        </div>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="userConfirm" name="userConfirm" placeholder="Confirm Email Address" value="{{ request.form['userConfirm'] }}">
+            <label for="floatingInput">Confirm Email Address</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="secureKey" name="secureKey" placeholder="Secure Key">
+            <label for="floatingInput">Secure Key</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password">
+            <label for="floatingPassword">Confirm Password</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit" value="Register">Register</button>
+    </form>
+</main>
+<footer class="container fixed-bottom">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2021 Harry Alderton. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>
+</body>
+
+</html>

@@ -1,9 +1,6 @@
 import pytest
 from flask import g, session
 
-import PasswordManager
-from PasswordManager.db import get_db
-
 
 def test_register(client, app):
     assert client.get('/auth/register').status_code == 200
@@ -13,7 +10,7 @@ def test_register(client, app):
     assert 'http://localhost/auth/login' == response.headers['Location']
 
     with app.app_context():
-        assert PasswordManager.db.get_db().execute(
+        assert DisserationPasswordManager.db.get_db().execute(
             "select * from user where username = 'a'",
         ).fetchone() is not None
 

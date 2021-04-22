@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.flaskenv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e212e508-d943-42a9-a6aa-bfd64536c974.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e212e508-d943-42a9-a6aa-bfd64536c974.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/auth/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,13 +73,35 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\PasswordManager\static\images" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\PasswordManager" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager" />
+      <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\PasswordManager\static\images" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\flaskr" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_factory.test_index">
+  <component name="RunManager" selected="Python.auth">
+    <configuration name="auth" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DisserationPasswordManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PasswordManager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PasswordManager/auth.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DisserationPasswordManager" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,28 +116,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/conftest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_blog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DisserationPasswordManager" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_blog.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.auth" />
         <item itemvalue="Python tests.pytest for test_factory.test_index" />
         <item itemvalue="Python tests.pytest for test_factory.test_config" />
         <item itemvalue="Python tests.pytest for test_blog.test_index" />
         <item itemvalue="Python.conftest" />
-        <item itemvalue="Python.test_blog" />
       </list>
     </recent_temporary>
   </component>
@@ -217,6 +224,11 @@
       <workItem from="1618517986319" duration="6442000" />
       <workItem from="1618675433866" duration="2322000" />
       <workItem from="1618759564659" duration="4690000" />
+      <workItem from="1618856500339" duration="1402000" />
+      <workItem from="1618931957489" duration="11923000" />
+      <workItem from="1618954280147" duration="90000" />
+      <workItem from="1619007943213" duration="8339000" />
+      <workItem from="1619093139010" duration="4312000" />
     </task>
     <servers />
   </component>
@@ -240,6 +252,7 @@
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$pytest_for_test_factory_test_config.coverage" NAME="pytest for test_factory.test_config Coverage Results" MODIFIED="1618676397860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$conftest.coverage" NAME="conftest Coverage Results" MODIFIED="1618250481792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$Flask__PasswordManager___init___py_.coverage" NAME="Flask (PasswordManager/__init__.py) Coverage Results" MODIFIED="1617646479343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/DisserationPasswordManager$auth.coverage" NAME="auth Coverage Results" MODIFIED="1618947220886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PasswordManager" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1617550680476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$test_blog.coverage" NAME="test_blog Coverage Results" MODIFIED="1618250164721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$pytest_for_test_blog_test_index.coverage" NAME="pytest for test_blog.test_index Coverage Results" MODIFIED="1618259852768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
