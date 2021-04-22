@@ -30,8 +30,21 @@ def register():
             error = 'Confirm Email Address is required'
         elif userEmail != userConfirm:
             error = 'Your emails do not match'
+        elif not secureKey:
+            error = 'A secure Key is required'
+        elif not password:
+            error = 'Password is required'
+        elif len(password) <= 8:
+            error = 'Your password must be greater than 8 characters'
+        elif not re.fullmatch('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$', password):  # nopep8
+            error = "Your password must" "\u2022 be between 8-30 charcters"\
+                    "\u2022 contain at least 1 digit" \
+                    " \u2022 at least 1 special character !@#$%^&*\u2022" \
+                    " a minimum of a 1 uppercase character and 1 lowercase character"
         elif not passwordConfirm:
             error = 'Please confirm your Password'
+        elif password != passwordConfirm:
+            error = 'Your passwords do not match'
         elif db.execute(
                 'SELECT id FROM user WHERE userEmail = ?', (userEmail,)
         ).fetchone() is not None:

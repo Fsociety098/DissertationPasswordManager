@@ -2,6 +2,7 @@ import os
 import tempfile
 
 import pytest
+import PasswordManager
 from PasswordManager import create_app
 from PasswordManager.db import init_db
 
@@ -21,7 +22,7 @@ def app():
     # create the database and load test data
     with app.app_context():
         init_db()
-        DisserationPasswordManager.db.get_db().executescript(_data_sql)
+        PasswordManager.db.get_db().executescript(_data_sql)
 
     yield app
 
