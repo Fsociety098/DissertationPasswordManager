@@ -35,3 +35,9 @@ html
     left: 0;
     z-index: 1030;
 }
+
+.flash-error{
+    background-color: #FFCCCC;
+    margin-bottom: 1em;
+    text-align: center;
+}
