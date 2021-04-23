@@ -1420,17 +1420,23 @@
       <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="512" parent="173" name="sqlite_autoindex_user_1">
+    <column id="512" parent="173" name="created">
+      <Position>6</Position>
+      <DataType>TIMESTAMP|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="513" parent="173" name="sqlite_autoindex_user_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userEmail</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="513" parent="173">
+    <key id="514" parent="173">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="514" parent="173">
+    <key id="515" parent="173">
       <ColNames>userEmail</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_user_1</UnderlyingIndexName>
     </key>

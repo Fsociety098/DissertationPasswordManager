@@ -32,7 +32,7 @@ def test_register(client, app):
         (b'Your passwords do not match', 'test', 'test@test.com', 'test@test.com', 'secureKey', 'password1@A', 'pass1'),
         (b'is already registered', 'test', 'test@test.com', 'test@test.com', 'secureKey', 'password1@A', 'password1@A'),
 ))
-def test_register_validate_input(client, fName, userEmail, userConfirm, secureKey, password, passwordConfirm, message):
+def test_register_validate_input(client, message, fName, userEmail, userConfirm, secureKey, password, passwordConfirm):
     response = client.post(
         '/auth/register',
         data={'fName': fName, 'userEmail': userEmail, 'userConfirm': userConfirm, 'secureKey': secureKey,
@@ -44,20 +44,23 @@ def test_register_validate_input(client, fName, userEmail, userConfirm, secureKe
 def test_login(client, auth):
     assert client.get('/auth/login').status_code == 200
     response = auth.login()
-    assert response.headers['Location'] == 'http://localhost/'
+    assert response.headers['Location'] == 'http://localhost'
 
     with client:
-        client.get('/')
+        client.get('')
         assert session['user_id'] == 1
         assert g.user['fName'] == 'test'
 
 
-@pytest.mark.parametrize(('username', 'password', 'message'), (
-        ('a', 'test', b'Incorrect username.'),
-        ('test', 'a', b'Incorrect password.'),
+@pytest.mark.parametrize(('message', 'userEmail', 'secureKey', 'password', ), (
+        (b'Your Email, Secure Key or Password is wrong. Please try again', 'test1@test.com', 'test11', 'pass'),
+        (b'Your Email, Secure Key or Password is wrong. Please try again', 'test@test.com', 'test11', 'pass'),
+        (b'Your Email, Secure Key or Password is wrong. Please try again', 'test@test.com', 'secureKey', 'pass'),
+        (b'Your Email, Secure Key or Password is wrong. Please try again', 'test@test.com', 'secure', 'password1@A'),
+        (b'Your Email, Secure Key or Password is wrong. Please try again', 'test1@test.com', 'secureKey', 'password1@A')
 ))
-def test_login_validate_input(auth, username, password, message):
-    response = auth.login(username, password)
+def test_login_validate_input(message, auth, userEmail, secureKey, password):
+    response = auth.login(userEmail, secureKey, password)
     assert message in response.data
 
 

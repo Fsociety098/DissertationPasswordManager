@@ -31,7 +31,7 @@ def create_app(test_config=None):
     def home():
         return render_template('index.html')
 
-    from PasswordManager import db
+    from . import db
     db.init_app(app)
 
     from PasswordManager import auth
