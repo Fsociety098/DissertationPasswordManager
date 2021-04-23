@@ -41,18 +41,19 @@ def test_register_validate_input(client, message, fName, userEmail, userConfirm,
     assert message in response.data
 
 
+# TODO
 def test_login(client, auth):
     assert client.get('/auth/login').status_code == 200
     response = auth.login()
-    assert response.headers['Location'] == 'http://localhost'
+    assert response.headers['Location'] == 'http://localhost/'
 
     with client:
-        client.get('')
+        client.get('/')
         assert session['user_id'] == 1
         assert g.user['fName'] == 'test'
 
 
-@pytest.mark.parametrize(('message', 'userEmail', 'secureKey', 'password', ), (
+@pytest.mark.parametrize(('message', 'userEmail', 'secureKey', 'password',), (
         (b'Your Email, Secure Key or Password is wrong. Please try again', 'test1@test.com', 'test11', 'pass'),
         (b'Your Email, Secure Key or Password is wrong. Please try again', 'test@test.com', 'test11', 'pass'),
         (b'Your Email, Secure Key or Password is wrong. Please try again', 'test@test.com', 'secureKey', 'pass'),

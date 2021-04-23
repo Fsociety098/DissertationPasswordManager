@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c21ee0ea-9a88-4c34-88ba-18b1e3e627cc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c21ee0ea-9a88-4c34-88ba-18b1e3e627cc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e212e508-d943-42a9-a6aa-bfd64536c974.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +90,7 @@
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\flaskr" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_auth.test_register">
+  <component name="RunManager" selected="Python tests.pytest for test_auth.test_login">
     <configuration name="DisserationPasswordManager" type="Python.FlaskServer">
       <option name="flaskDebug" value="true" />
       <module name="DissertationPasswordManager" />
@@ -212,10 +202,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_auth.test_login" />
         <item itemvalue="Python tests.pytest for test_auth.test_register" />
         <item itemvalue="Python tests.pytest for test_auth.test_logout" />
         <item itemvalue="Python tests.pytest for test_auth.test_login_validate_input" />
-        <item itemvalue="Python tests.pytest for test_auth.test_login" />
         <item itemvalue="Python tests.pytest for test_auth.test_register_validate_input" />
       </list>
     </recent_temporary>
@@ -252,7 +242,7 @@
       <workItem from="1619121065619" duration="4337000" />
       <workItem from="1619176632357" duration="8498000" />
       <workItem from="1619204815811" duration="945000" />
-      <workItem from="1619205801930" duration="3015000" />
+      <workItem from="1619205801930" duration="5343000" />
     </task>
     <servers />
   </component>
@@ -271,9 +261,16 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/tests/test_auth.py" line="43">
+        <watch expression="auth" language="Python" />
+      </inline-watch>
+    </watches-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DissertationPasswordManager$DisserationPasswordManager.coverage" NAME="DisserationPasswordManager Coverage Results" MODIFIED="1619206942923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DissertationPasswordManager$pytest_for_test_auth_test_login.coverage" NAME="pytest for test_auth.test_login Coverage Results" MODIFIED="1619208636017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/DissertationPasswordManager$pytest_for_test_auth_test_login.coverage" NAME="pytest for test_auth.test_login Coverage Results" MODIFIED="1619210568306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$pytest_for_test_factory_test_index.coverage" NAME="pytest for test_factory.test_index Coverage Results" MODIFIED="1618677096525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$pytest_for_test_factory_test_config.coverage" NAME="pytest for test_factory.test_config Coverage Results" MODIFIED="1618676397860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$conftest.coverage" NAME="conftest Coverage Results" MODIFIED="1618250481792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
