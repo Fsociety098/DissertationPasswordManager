@@ -20,12 +20,16 @@
 
         <div class="form-floating">
             {% for message in get_flashed_messages() %}
-                <div class="flash">{{ message }}</div>
+                <div class="flash flash-error">{{ message }}</div>
             {% endfor %}
         </div>
         <div class="form-floating">
-            <input type="email" class="form-control" id="username" name="username" placeholder="name@example.com">
+            <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="secureKey" name="secureKey" placeholder="Secure Key">
+            <label for="floatingInput">Secure Key</label>
         </div>
         <div class="form-floating">
             <input type="password" class="form-control" id="password" name="password" placeholder="Password">
