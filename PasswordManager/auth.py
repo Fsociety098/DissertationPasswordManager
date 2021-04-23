@@ -37,7 +37,7 @@ def register():
         elif len(password) <= 8:
             error = 'Your password must be greater than 8 characters'
         elif not re.fullmatch('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$', password):  # nopep8
-            error = "Your password must" "\u2022 be between 8-30 charcters"\
+            error = "Your password must" "\u2022 be between 8-30 charcters" \
                     "\u2022 contain at least 1 digit" \
                     " \u2022 at least 1 special character !@#$%^&*\u2022" \
                     " a minimum of a 1 uppercase character and 1 lowercase character"
@@ -72,10 +72,9 @@ def login():
         user = db.execute(
             'SELECT * FROM user WHERE userEmail = ?', (userEmail,)
         ).fetchone()
-        if user is None:
-            if not check_password_hash(user(['secureKey']), secureKey):
-                if not check_password_hash(user(['password']), password):
-                    error = "Your Email, Secure Key or Password is wrong. Please try again"
+        if user is None or not check_password_hash(user['secureKey'], secureKey) or not check_password_hash(
+                user['password'], password):
+            error = "Your Email, Secure Key or Password is wrong. Please try again"
 
         if error is None:
             session.clear()

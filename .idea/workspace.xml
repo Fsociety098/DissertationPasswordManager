@@ -7,8 +7,6 @@
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +224,7 @@
       <workItem from="1619007943213" duration="8339000" />
       <workItem from="1619093139010" duration="17505000" />
       <workItem from="1619121065619" duration="4337000" />
-      <workItem from="1619176632357" duration="7596000" />
+      <workItem from="1619176632357" duration="8498000" />
     </task>
     <servers />
   </component>
