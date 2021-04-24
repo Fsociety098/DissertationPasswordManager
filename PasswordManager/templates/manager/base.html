@@ -18,6 +18,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            </ul>
             <ul class="navbar-nav navbar-right">
                 {% if not g.user %}
                     <li class="nav-item">
@@ -61,12 +63,13 @@
         <div class="container-fluid">
             <div class="row row-custom">
                 <div class="col-2 category">
-                    <div class="sub-title">Category</div>
-                    <ul>
-                        <li><a class=category-choose href="#">test</a></li>
-                        <li><a class=category-choose href="#">test</a></li>
-                        <li><a class=category-choose href="#">test</a></li>
-                    </ul>
+                    <div class="sub-title">Category
+                        <ul>
+                            <li><a class=category-choose href="#">test</a></li>
+                            <li><a class=category-choose href="#">test</a></li>
+                            <li><a class=category-choose href="#">test</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-3 passwordsearch" style="border-right: 3px black solid">
                     <div class="search">
@@ -74,24 +77,38 @@
                         <button type="submit" class="searchButton">
                             <i class="fa fa-search"></i>
                         </button>
-                        <a class="" href="#">New</a>
+                        <button type="button" class="btn btn-secondary newbutton" data-bs-target="#">New</button>
                     </div>
+                    <div class="dropdown filtermenu">
+                        <a class="btn btn-secondary dropdown-toggle filterbutton" href="#" role="button"
+                           id="dropdownMenuLink"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Filter
+                        </a>
+                        <ul class="dropdown-menu filterbutton" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">A-Z</a></li>
+                            <li><a class="dropdown-item" href="#">Z-A</a></li>
+                            <li><a class="dropdown-item" href="#">Last Created</a></li>
+                            <li><a class="dropdown-item" href="#">Last Modified</a></li>
+                        </ul>
+                    </div>
+
                     <div class="choose-password">
                         <h1>test</h1>
                         {% block choosePassword %}{% endblock choosePassword %}
                     </div>
                 </div>
-                <div class="col-7">
+                <div class="col-7 passwordsearch">
+                    <div class="search">
+                        <button type="button" class="btn btn-secondary editbutton" data-bs-target="#">Edit</button>
+                    </div>
+                    <div class="passwordselected container">
                     {% block passwordInfo %}{% endblock passwordInfo %}
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
-    <footer class="container base-footer">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>&copy; 2021 Harry Alderton. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer>
     </body>
 </main>
 
