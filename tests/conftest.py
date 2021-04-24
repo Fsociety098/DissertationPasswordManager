@@ -49,7 +49,7 @@ class AuthActions(object):
     def login(self, userEmail='test@test.com', secureKey='test', password='password1@A'):
         return self._client.post(
             '/auth/login',
-            data={'userEmail': userEmail, 'secureKey': secureKey, 'password': password}
+            data={'userEmail': userEmail, 'secureKey': secureKey, 'manager': password}
         )
 
     def logout(self):

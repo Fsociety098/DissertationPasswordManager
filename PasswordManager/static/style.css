@@ -41,3 +41,62 @@ html
     margin-bottom: 1em;
     text-align: center;
 }
+
+.content{
+    padding-top: 3.2em;
+}
+
+.category{
+    padding: 0;
+    list-style: none;
+    background-color: lightgrey;
+    height: 100%;
+    border-radius: 0.5em;
+    box-shadow: 2px 2px grey;
+}
+
+.category li, ul{
+     margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+.category a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+
+}
+
+.sub-title{
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.category-choose{
+    color: grey;
+
+}
+
+.row-custom{
+    height: 90%;
+    margin-bottom: 1em;
+
+
+}
+
+.search{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px lightslategray solid;
+
+}
+
+.passwordsearch{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}

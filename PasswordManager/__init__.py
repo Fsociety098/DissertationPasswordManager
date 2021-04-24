@@ -15,7 +15,7 @@ def create_app(test_config=None):
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
-        app.config.from_pyfile("config.py", silent=True)
+        app.config.from_pyfile("setup.py", silent=True)
     else:
         # load the test config if passed in
         app.config.update(test_config)
@@ -37,7 +37,9 @@ def create_app(test_config=None):
     from PasswordManager import auth
     app.register_blueprint(auth.bp)
 
-    # index page
+    from PasswordManager import manager
+    app.register_blueprint(manager.bp)
+
     from PasswordManager import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')

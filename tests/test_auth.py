@@ -7,7 +7,7 @@ def test_register(client, app):
     assert client.get('/auth/register').status_code == 200
     response = client.post(
         '/auth/register', data={'fName': 'test', 'userEmail': 'test2@test.com', 'userConfirm': 'test2@test.com',
-                                'secureKey': 'secureKey2', 'password': 'test@Password12',
+                                'secureKey': 'secureKey2', 'manager': 'test@Password12',
                                 'passwordConfirm': 'test@Password12'}
     )
     assert 'http://localhost/auth/login' == response.headers['Location']
@@ -18,7 +18,7 @@ def test_register(client, app):
         ).fetchone() is not None
 
 
-@pytest.mark.parametrize(('message', 'fName', 'userEmail', 'userConfirm', 'secureKey', 'password', 'passwordConfirm'), (
+@pytest.mark.parametrize(('message', 'fName', 'userEmail', 'userConfirm', 'secureKey', 'manager', 'passwordConfirm'), (
         (b'Full name is required', '', '', '', '', '', ''),
         (b'Email Address is required', 'test', '', '', '', '', ''),
         (b'Confirm Email Address is required', 'test', 'test@test.com', '', '', '', ''),
@@ -26,9 +26,9 @@ def test_register(client, app):
         (b'Your emails do not match', 'test', 'test1@test.com', 'test@test.com', '', '', ''),
         (b'A secure Key is required', 'test', 'test@test.com', 'test@test.com', '', '', ''),
         (b'Password is required', 'test', 'test@test.com', 'test@test.com', 'secureKey', '', ''),
-        (b'Your password must be greater than 8 characters', 'test', 'test@test.com', 'test@test.com', 'secureKey',
+        (b'Your manager must be greater than 8 characters', 'test', 'test@test.com', 'test@test.com', 'secureKey',
          'pass', ''),
-        (b'Your password must', 'test', 'test@test.com', 'test@test.com', 'secureKey', 'password1', ''),
+        (b'Your manager must', 'test', 'test@test.com', 'test@test.com', 'secureKey', 'password1', ''),
         (b'Your passwords do not match', 'test', 'test@test.com', 'test@test.com', 'secureKey', 'password1@A', 'pass1'),
         (b'is already registered', 'test', 'test@test.com', 'test@test.com', 'secureKey', 'password1@A', 'password1@A'),
 ))
@@ -36,7 +36,7 @@ def test_register_validate_input(client, message, fName, userEmail, userConfirm,
     response = client.post(
         '/auth/register',
         data={'fName': fName, 'userEmail': userEmail, 'userConfirm': userConfirm, 'secureKey': secureKey,
-              'password': password, 'passwordConfirm': passwordConfirm}
+              'manager': password, 'passwordConfirm': passwordConfirm}
     )
     assert message in response.data
 
@@ -53,7 +53,7 @@ def test_login(client, auth):
         assert g.user['fName'] == 'test'
 
 
-@pytest.mark.parametrize(('message', 'userEmail', 'secureKey', 'password',), (
+@pytest.mark.parametrize(('message', 'userEmail', 'secureKey', 'manager',), (
         (b'Your Email, Secure Key or Password is wrong. Please try again', 'test1@test.com', 'test11', 'pass'),
         (b'Your Email, Secure Key or Password is wrong. Please try again', 'test@test.com', 'test11', 'pass'),
         (b'Your Email, Secure Key or Password is wrong. Please try again', 'test@test.com', 'secureKey', 'pass'),

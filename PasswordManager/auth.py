@@ -17,7 +17,7 @@ def register():
         userEmail = request.form['userEmail']
         userConfirm = request.form['userConfirm']
         secureKey = request.form['secureKey']
-        password = request.form['password']
+        password = request.form['manager']
         passwordConfirm = request.form['passwordConfirm']
         db = get_db()
         error = None
@@ -35,9 +35,9 @@ def register():
         elif not password:
             error = 'Password is required'
         elif len(password) <= 8:
-            error = 'Your password must be greater than 8 characters'
+            error = 'Your manager must be greater than 8 characters'
         elif not re.fullmatch('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$', password):  # nopep8
-            error = "Your password must" "\u2022 be between 8-30 charcters" \
+            error = "Your manager must" "\u2022 be between 8-30 charcters" \
                     "\u2022 contain at least 1 digit" \
                     " \u2022 at least 1 special character !@#$%^&*\u2022" \
                     " a minimum of a 1 uppercase character and 1 lowercase character"
@@ -52,7 +52,7 @@ def register():
 
         if error is None:
             db.execute(
-                'INSERT INTO user (fName, userEmail, secureKey, password) VALUES (?, ?, ?, ?)',
+                'INSERT INTO user (fName, userEmail, secureKey, manager) VALUES (?, ?, ?, ?)',
                 (fName, userEmail, generate_password_hash(secureKey), generate_password_hash(password))
             )
             db.commit()
@@ -66,14 +66,14 @@ def login():
     if request.method == 'POST':
         userEmail = request.form['userEmail']
         secureKey = request.form['secureKey']
-        password = request.form['password']
+        password = request.form['manager']
         db = get_db()
         error = None
         user = db.execute(
             'SELECT * FROM user WHERE userEmail = ?', (userEmail,)
         ).fetchone()
         if user is None or not check_password_hash(user['secureKey'], secureKey) or not check_password_hash(
-                user['password'], password):
+                user['manager'], password):
             error = "Your Email, Secure Key or Password is wrong. Please try again"
 
         if error is None:
