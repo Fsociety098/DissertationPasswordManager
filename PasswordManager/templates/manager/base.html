@@ -92,10 +92,11 @@
                             <li><a class="dropdown-item" href="#">Last Modified</a></li>
                         </ul>
                     </div>
-
-                    <div class="choose-password">
-                        <h1>test</h1>
-                        {% block choosePassword %}{% endblock choosePassword %}
+                    <div class="row overflow-auto row-choose-password">
+                        <div class="choose-password">
+                            {% block choosePassword %}
+                            {% endblock choosePassword %}
+                        </div>
                     </div>
                 </div>
                 <div class="col-7 passwordsearch">
@@ -103,7 +104,7 @@
                         <button type="button" class="btn btn-secondary editbutton" data-bs-target="#">Edit</button>
                     </div>
                     <div class="passwordselected container">
-                    {% block passwordInfo %}{% endblock passwordInfo %}
+                        {% block passwordInfo %}{% endblock passwordInfo %}
                     </div>
                 </div>
             </div>

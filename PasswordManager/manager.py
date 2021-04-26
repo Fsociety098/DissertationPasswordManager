@@ -12,4 +12,10 @@ bp = Blueprint('manager', __name__, url_prefix='/manager')
 
 @bp.route('/index', methods=('GET', 'POST'))
 def index():
-    return render_template('manager/base.html')
+    db = get_db()
+    user_id = session.get('user_id')
+
+    passwords = db.execute(
+        'SELECT p.id, info.id, info.titlename, info.username FROM password p JOIN passwordinfo info '
+        'on info.id = p.passwordinfoID WHERE p.userID = ?', (user_id,))
+    return render_template('manager/selectpassword.html', passwords=passwords)
