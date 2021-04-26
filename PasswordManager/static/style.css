@@ -123,6 +123,7 @@ body {
     background-color: #f9f9f9;
     border: none;
     color: black;
+
 }
 
 .editbutton {
@@ -191,31 +192,55 @@ body {
     color: black;
 }
 
-.row.overflow-auto{
+.row.overflow-auto {
     max-height: 88%;
 }
 
-::-webkit-scrollbar{
-    width:6px;
+::-webkit-scrollbar {
+    width: 6px;
 }
 
-.choose-password{
+.choose-password {
     max-width: 90%;
 }
-.row-choose-password{
+
+.row-choose-password {
     max-width: 100%;
 }
 
- ::-webkit-scrollbar-track {
-            background: #212529;
-            border-radius: 5px;
-        }
- ::-webkit-scrollbar-thumb {
-            background: grey;
-            border-radius: 5px;
-            border-radius: 1em;
-        }
+::-webkit-scrollbar-track {
+    background: #212529;
+    border-radius: 5px;
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-            background: #eaeaea;
-        }
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 5px;
+    border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #eaeaea;
+}
+
+.choose-password-text {
+    margin-left: 4em;
+}
+
+.choose-password-text h1 {
+    text-decoration: black;
+    text-emphasis: black;
+    font-size: 25px;
+    font-family: Cambria;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+.choose-password-text p {
+    font-size: 15px;
+    font-family: Cambria;
+}
+
+.space{
+    margin: 1em;
+}

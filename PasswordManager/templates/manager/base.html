@@ -86,16 +86,20 @@
                             Filter
                         </a>
                         <ul class="dropdown-menu filterbutton" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">A-Z</a></li>
-                            <li><a class="dropdown-item" href="#">Z-A</a></li>
-                            <li><a class="dropdown-item" href="#">Last Created</a></li>
-                            <li><a class="dropdown-item" href="#">Last Modified</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('manager.asc') }}">A-Z</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('manager.desc') }}">Z-A</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('manager.lastcreated') }}">Last Created</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('manager.lastmodified') }}">Last Modified</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('manager.index') }}" style="border-top: 1px black solid">Clear Filter</a></li>
                         </ul>
                     </div>
+                <div class="space"></div>
                     <div class="row overflow-auto row-choose-password">
                         <div class="choose-password">
-                            {% block choosePassword %}
-                            {% endblock choosePassword %}
+                            <div class="choose-password-text">
+                                {% block choosePassword %}
+                                {% endblock choosePassword %}
+                            </div>
                         </div>
                     </div>
                 </div>
