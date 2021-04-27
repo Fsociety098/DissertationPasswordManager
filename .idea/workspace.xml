@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/21f017f6-e2ec-4a67-ae1e-0c4d39b1d561.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/21f017f6-e2ec-4a67-ae1e-0c4d39b1d561.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/selectpassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/selectpassword.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -246,6 +249,7 @@
       <workItem from="1619204815811" duration="945000" />
       <workItem from="1619205801930" duration="5343000" />
       <workItem from="1619261029188" duration="29019000" />
+      <workItem from="1619520350631" duration="20223000" />
     </task>
     <servers />
   </component>

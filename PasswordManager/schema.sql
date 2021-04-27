@@ -20,7 +20,7 @@ CREATE TABLE post (
 CREATE TABLE category (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     categoryName TEXT,
-    userID NOT NULL,
+    userID INTEGER NOT NULL,
     FOREIGN KEY (userID) REFERENCES user (id)
 );
 CREATE TABLE categoryPassword (

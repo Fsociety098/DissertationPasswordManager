@@ -1,0 +1,6 @@
+
+    {% for category in categories %}
+        <ul>
+            <li><a class=category-choose href="{{ url_for('manager.category', id=category['id'])}}">{{category['categoryName']}}</a></li>
+        </ul>
+    {% endfor %}

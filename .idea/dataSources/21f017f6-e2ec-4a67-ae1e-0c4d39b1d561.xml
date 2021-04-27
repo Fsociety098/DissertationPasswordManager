@@ -1349,6 +1349,7 @@
     </column>
     <column id="499" parent="170" name="userID">
       <Position>3</Position>
+      <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="500" parent="170">
