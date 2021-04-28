@@ -8,6 +8,17 @@ from PasswordManager.db import get_db
 bp = Blueprint('manager', __name__, url_prefix='/manager')
 
 
+def passwordfunc():
+    db = get_db()
+    user_id = session.get('user_id')
+
+    passwords = db.execute(
+        'SELECT info.userid,info.id, info.titlename, info.username FROM passwordinfo info '
+        'JOIN user u on info.userid = u.id WHERE u.id = ?', (user_id,))
+
+    return passwords
+
+
 def categoriesfunc():
     db = get_db()
     user_id = session.get('user_id')
@@ -28,12 +39,7 @@ def categoriesform():
 
 @bp.route('/index', methods=('GET', 'POST'))
 def index():
-    db = get_db()
-    user_id = session.get('user_id')
-
-    passwords = db.execute(
-        'SELECT u.id, info.id, info.titlename, info.username FROM passwordinfo info '
-        'JOIN user u on info.id = u.passwordid WHERE u.id = ?', (user_id,))
+    passwords = passwordfunc()
     categories = categoriesfunc()
     categoriesforms = categoriesform()
     return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
@@ -47,8 +53,8 @@ def asc():
     categories = categoriesfunc()
     categoriesforms = categoriesform()
     passwords = db.execute(
-        'SELECT u.id,info.id, info.titlename, info.username, info.created_timestamp FROM passwordinfo info '
-        'JOIN user u on info.id = u.passwordid '
+        'SELECT info.userid,info.id, info.titlename, info.username FROM passwordinfo info '
+        'JOIN user u on info.userid = u.id'
         ' WHERE u.id = ? ORDER BY titlename asc ', (user_id,))
     return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
                            categoryforms=categoriesforms)
@@ -61,8 +67,8 @@ def desc():
     categories = categoriesfunc()
     categoriesforms = categoriesform()
     passwords = db.execute(
-        'SELECT u.id, info.id, info.titlename, info.username, info.created_timestamp FROM passwordinfo info '
-        'JOIN user u on info.id = u.passwordid '
+        'SELECT info.userid,info.id, info.titlename, info.username FROM passwordinfo info '
+        'JOIN user u on info.userid = u.id '
         ' WHERE u.id = ? ORDER BY titlename desc ', (user_id,))
     return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
                            categoryforms=categoriesforms)
@@ -75,8 +81,8 @@ def lastmodified():
     categories = categoriesfunc()
     categoriesforms = categoriesform()
     passwords = db.execute(
-        'SELECT u.id,info.id, info.titlename, info.username, info.lastmodified FROM passwordinfo info '
-        'JOIN user u on info.id = u.passwordid '
+        'SELECT info.userid,info.id, info.titlename, info.username, info.lastmodified FROM passwordinfo info'
+        ' JOIN user u on info.userid = u.id '
         ' WHERE u.id = ? ORDER BY lastmodified desc ', (user_id,))
     return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
                            categoryforms=categoriesforms)
@@ -89,8 +95,8 @@ def lastcreated():
     categories = categoriesfunc()
     categoriesforms = categoriesform()
     passwords = db.execute(
-        'SELECT u.id, info.id, info.titlename, info.username, info.created_timestamp FROM passwordinfo info '
-        'JOIN user u on info.id = u.passwordid '
+        'SELECT info.userid,info.id, info.titlename, info.username FROM passwordinfo info '
+        'JOIN user u on info.userid = u.id '
         ' WHERE u.id = ? ORDER BY created_timestamp desc ', (user_id,))
     return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
                            categoryforms=categoriesforms)
@@ -103,9 +109,9 @@ def category(id):
     categories = categoriesfunc()
     categoriesforms = categoriesform()
     passwords = db.execute(
-        'SELECT u.id, info.id, info.titlename, info.username, info.lastmodified, cP.id '
-        'FROM passwordinfo info  JOIN user u on info.id = u.passwordid'
-        ' JOIN category cP on info.id = cP.userID WHERE u.id = ? '
+        'SELECT u.id, info.userid, info.titlename, info.username, info.lastmodified, cP.id '
+        'FROM passwordinfo info  JOIN user u on info.userid = u.id'
+        ' JOIN category cP on info.category_id = cP.id WHERE u.id = ? '
         'AND cP.id = ? '
         'ORDER BY titlename asc', (user_id, id))
 
@@ -121,11 +127,12 @@ def newpassword():
         username = request.form['username']
         password = request.form['password']
         categoryform = request.form['category']
+        categoriesforms = categoriesform()
         db = get_db()
         error = None
-        db = db.execute('INSERT INTO passwordinfo VALUES (?,?,?,?)',
-                        (website, username, generate_password_hash(password), categoryform))
+        db = db.execute('INSERT INTO passwordinfo VALUES (website,username,titlename,password,category_id,userid)',
+                        (website, username, generate_password_hash(password), categoryform, user_id))
         db.commit()
         flash(error)
 
-    return render_template('auth/login.html')
+    return newpassword

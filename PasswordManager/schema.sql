@@ -20,28 +20,20 @@ CREATE TABLE passwordinfo(
     titlename TEXT,
     password TEXT,
     category_id INTEGER,
+    userid INTEGER,
     created_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     lastmodified TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (category_id) REFERENCES category (id) ON UPDATE CASCADE
+    FOREIGN KEY (category_id) REFERENCES category (id) ON UPDATE CASCADE,
+    FOREIGN KEY (userid) REFERENCES user (id) ON UPDATE CASCADE
 );
 
 CREATE TABLE user(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  passwordid INTEGER,
   fName Text NOT NULL,
   userEmail TEXT UNIQUE NOT NULL,
   secureKey TEXT NOT NULL,
   password TEXT NOT NULL,
-  created_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (passwordid) REFERENCES passwordinfo (id) ON UPDATE CASCADE
-);
-
-CREATE TABLE userPass(
-    id INTEGER PRIMARY KEY NOT NULL,
-    userid INTEGER,
-    passid INTEGER,
-    FOREIGN KEY (userid) REFERENCES user(id) ON UPDATE CASCADE,
-    FOREIGN KEY (passid) REFERENCES passwordinfo(id) ON UPDATE CASCADE
+  created_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 insert into category (categoryName, userID)values ('Login','0');
