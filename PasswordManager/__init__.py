@@ -1,11 +1,15 @@
 import os
 
 from flask import Flask, render_template
+from flask_wtf.csrf import CSRFProtect
+
+csrf = CSRFProtect()
 
 
 def create_app(test_config=None):
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__, instance_relative_config=True)
+    csrf.init_app(app)
     app.config.from_mapping(
         # a default secret that should be overridden by instance config
         SECRET_KEY="dev",

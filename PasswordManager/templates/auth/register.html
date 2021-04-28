@@ -15,6 +15,7 @@
 <main class="form-signinout">
 
     <form method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
         <img class="mb-4" src="/static/images/placeholder.png" alt="" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">Register</h1>
 
@@ -24,15 +25,18 @@
             {% endfor %}
         </div>
         <div class="form-floating">
-            <input type="text" class="form-control" id="fName" name="fName" placeholder="Joe Bloggs" value="{{ request.form['fName'] }}">
+            <input type="text" class="form-control" id="fName" name="fName" placeholder="Joe Bloggs"
+                   value="{{ request.form['fName'] }}">
             <label for="floatingInput">Full Name</label>
         </div>
         <div class="form-floating">
-            <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="name@example.com" value="{{ request.form['userEmail'] }}">
+            <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="name@example.com"
+                   value="{{ request.form['userEmail'] }}">
             <label for="floatingInput">Email Address</label>
         </div>
         <div class="form-floating">
-            <input type="email" class="form-control" id="userConfirm" name="userConfirm" placeholder="Confirm Email Address" value="{{ request.form['userConfirm'] }}">
+            <input type="email" class="form-control" id="userConfirm" name="userConfirm"
+                   placeholder="Confirm Email Address" value="{{ request.form['userConfirm'] }}">
             <label for="floatingInput">Confirm Email Address</label>
         </div>
         <div class="form-floating">
@@ -44,7 +48,8 @@
             <label for="floatingPassword">Password</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password">
+            <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm"
+                   placeholder="Confirm Password">
             <label for="floatingPassword">Confirm Password</label>
         </div>
 

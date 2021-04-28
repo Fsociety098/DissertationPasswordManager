@@ -1,53 +1,28 @@
-DROP TABLE IF EXISTS post;
 DROP TABLE IF EXISTS user;
-DROP TABLE IF EXISTS password;
 DROP TABLE IF EXISTS passwordinfo;
-DROP TABLE IF EXISTS categoryPassword;
+DROP TABLE IF EXISTS userPass;
 DROP TABLE IF EXISTS category;
 
 
-
-
-CREATE TABLE post (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  author_id INTEGER NOT NULL,
-  created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  title TEXT NOT NULL,
-  body TEXT NOT NULL,
-  FOREIGN KEY (author_id) REFERENCES user (id)
-);
 
 CREATE TABLE category (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     categoryName TEXT,
     userID INTEGER NOT NULL,
-    FOREIGN KEY (userID) REFERENCES user (id)
+    FOREIGN KEY (userID) REFERENCES user (id) ON UPDATE CASCADE
 );
-CREATE TABLE categoryPassword (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    categoryID INTEGER,
-    passwordID INTEGER,
-    FOREIGN KEY (categoryID) REFERENCES category(id),
-    FOREIGN KEY (passwordID) REFERENCES password (id)
-);
-CREATE TABLE password (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    passwordinfoID INTEGER,
-    userID INTEGER,
-    password TEXT,
-    FOREIGN KEY (passwordinfoID) REFERENCES passwordinfo (id),
-    FOREIGN KEY (userID) REFERENCES  user(id)
-);
+
 
 CREATE TABLE passwordinfo(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     website TEXT,
     username TEXT,
     titlename TEXT,
-    passwordid INTEGER,
+    password TEXT,
+    category_id INTEGER,
     created_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     lastmodified TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (passwordid) REFERENCES password (id)
+    FOREIGN KEY (category_id) REFERENCES category (id) ON UPDATE CASCADE
 );
 
 CREATE TABLE user(
@@ -58,7 +33,15 @@ CREATE TABLE user(
   secureKey TEXT NOT NULL,
   password TEXT NOT NULL,
   created_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (passwordid) REFERENCES password (id)
+  FOREIGN KEY (passwordid) REFERENCES passwordinfo (id) ON UPDATE CASCADE
+);
+
+CREATE TABLE userPass(
+    id INTEGER PRIMARY KEY NOT NULL,
+    userid INTEGER,
+    passid INTEGER,
+    FOREIGN KEY (userid) REFERENCES user(id) ON UPDATE CASCADE,
+    FOREIGN KEY (passid) REFERENCES passwordinfo(id) ON UPDATE CASCADE
 );
 
 insert into category (categoryName, userID)values ('Login','0');
