@@ -1,5 +1,5 @@
 from flask import (
-    Blueprint, flash, render_template, request, session, redirect, url_for
+    Blueprint, render_template, request, session, redirect, url_for
 )
 from werkzeug.security import generate_password_hash
 
@@ -94,6 +94,8 @@ def lastcreated():
     user_id = session.get('user_id')
     categories = categoriesfunc()
     categoriesforms = categoriesform()
+    error = None
+
     passwords = db.execute(
         'SELECT info.userid,info.id, info.titlename, info.username FROM passwordinfo info '
         'JOIN user u on info.userid = u.id '
@@ -128,11 +130,14 @@ def newpassword():
         formusername = request.form['username']
         formpassword = request.form['password']
         categoryform = request.form['category']
-        db = get_db()
-        db.execute('INSERT INTO passwordinfo (website, username, titlename, password, category_id, userid) '
-                   'VALUES (?, ?, ?, ?, ?, ?)',
-                   (formwebsite, formusername, formtitlename,
-                    generate_password_hash(formpassword), categoryform, user_id)
-                   )
-        db.commit()
-        return redirect(url_for('manager.index'))
+
+        if formtitlename == '':
+            formtitlename = formwebsite
+    db = get_db()
+    db.execute('INSERT INTO passwordinfo (website, username, titlename, password, category_id, userid) '
+               'VALUES (?, ?, ?, ?, ?, ?)',
+               (formwebsite, formusername, formtitlename,
+                generate_password_hash(formpassword), categoryform, user_id)
+               )
+    db.commit()
+    return redirect(url_for('manager.index'))
