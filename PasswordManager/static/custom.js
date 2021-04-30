@@ -32,7 +32,7 @@ jQuery(document).ready(function () {
             viewports: {
                 progress: undefined,
                 verdict: undefined,
-                errors: undefined
+                errors: undefined,
             },
             // Rules stuff
             ruleScores: {
@@ -70,19 +70,22 @@ jQuery(document).ready(function () {
                     return word.match(/^([\w\!\#$\%\&\'\*\+\-\/\=\?\^\`{\|\}\~]+\.)*[\w\!\#$\%\&\'\*\+\-\/\=\?\^\`{\|\}\~]+@((((([a-z0-9]{1}[a-z0-9\-]{0,62}[a-z0-9]{1})|[a-z])\.)+[a-z]{2,6})|(\d{1,3}\.){3}\d{1,3}(\:\d{1,5})?)$/i) && score;
                 },
                 bannedwords: function (options, word, score) {
-                    const findword = word;
-                    $.getJSON('../static/knownpassword.json', function (data) {
+                    var findword = word;
+                    let setflag = false;
+                    $.ajaxSetup({async: false});
+                    $.getJSON('../../static/knownpassword.json', function (data) {
                         $.each(data, function (i, obj) {
-                            for (i = 0; i < obj; i++) {
-                                if (obj == findword) {
-
-                                    options.errors.push(options.errorMessages.bannedpassword)
-                                    return score;
-                                }
-                                return true
+                            if (findword === obj) {
+                                setflag = true
                             }
                         })
                     })
+                    if (setflag === true) {
+                        options.errors.push(options.errorMessages.bannedpassword)
+                        return score;
+                    } else {
+                        setflag = false
+                    }
                 },
                 wordLength: function (options, word, score) {
                     var wordlen = word.length,
@@ -135,6 +138,7 @@ jQuery(document).ready(function () {
             var options = $el.data("pwstrength"),
                 progressbar = options.progressbar,
                 $verdict;
+
 
             if (options.showVerdicts) {
                 if (options.viewports.verdict) {
@@ -241,6 +245,7 @@ jQuery(document).ready(function () {
                         allOptions.onLoad();
                     }
                 });
+
             },
 
             destroy: function () {
@@ -324,4 +329,18 @@ jQuery(document).ready(function () {
         }
         return result;
     };
+
+    $.fn.pswdchoose = function (method) {
+        var result;
+        if (methods[method]) {
+            result = methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+        } else if (typeof method === "object" || !method) {
+            result = methods.init.apply(this, arguments);
+        } else {
+            $.error("Method " + method + " does not exist on jQuery.pswdchoose");
+        }
+        return result;
+    };
+
 }(jQuery));
+
