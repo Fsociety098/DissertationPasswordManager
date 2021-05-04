@@ -83,7 +83,7 @@
                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <form method="post" action="{{ url_for('manager.newpassword') }}">
+                                <form method="post" action="">
                                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">Create New Password</h5>
@@ -114,23 +114,31 @@
                                             <input type="password" class="form-control" id="password" name="password"
                                                    placeholder="Enter password">
                                             <div id="messages"></div>
+                                            <div id="complexpassword">
+                                                <form onsubmit="return false">
+                                                    {% include 'manager/passwordgenerator.html' %}
+                                                </form>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputState">Category</label>
+                                                <select id="category" class="form-control" name="category">
+                                                    {% include 'manager/categoryform.html' %}
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="inputState">Category</label>
-                                            <select id="category" class="form-control" name="category">
-                                                {% include 'manager/categoryform.html' %}
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary newbutton" data-dismiss="modal">
-                                            Close
-                                        </button>
-                                        <a href="">
-                                            <button type="submit" class="btn btn-primary newbutton" data-target="">Save
-                                                password
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary newbutton"
+                                                    data-dismiss="modal">
+                                                Close
                                             </button>
-                                        </a>
+                                            <a href="">
+                                                <button type="submit" class="btn btn-primary newbutton" data-target=""
+                                                        formaction="{{ url_for('manager.newpassword') }}">
+                                                    Save
+                                                    password
+                                                </button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </form>
                             </div>

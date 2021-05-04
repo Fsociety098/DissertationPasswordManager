@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PasswordManager/static/generatepassword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PasswordManager/static/passwordgenerator.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/passwordgenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/static/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twbs/bootstrap/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twbs/bootstrap/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twbs/bootstrap/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twbs/bootstrap/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +28,8 @@
       <list>
         <option value="Flask Main" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -66,11 +77,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="15.1.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="15.0.1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/PasswordManager/schema.sql" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,11 +94,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2020.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\PasswordManager\static" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\PasswordManager" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager" />
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\PasswordManager\static\images" />
@@ -249,7 +265,11 @@
       <workItem from="1619635559880" duration="10157000" />
       <workItem from="1619694378492" duration="35202000" />
       <workItem from="1619736555022" duration="56000" />
-      <workItem from="1619783103825" duration="15645000" />
+      <workItem from="1619783103825" duration="15830000" />
+      <workItem from="1619903165469" duration="2559000" />
+      <workItem from="1619983460487" duration="5236000" />
+      <workItem from="1620045282598" duration="22260000" />
+      <workItem from="1620130037836" duration="2168000" />
     </task>
     <servers />
   </component>

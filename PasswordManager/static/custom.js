@@ -1,4 +1,5 @@
 jQuery(document).ready(function () {
+
     const options = {
         onLoad: function () {
             $('#messages')
@@ -179,6 +180,7 @@ jQuery(document).ready(function () {
             }
         },
 
+
         calculateScore = function ($el) {
             var self = this,
                 word = $el.val(),
@@ -202,6 +204,23 @@ jQuery(document).ready(function () {
             return '<div class="progress"><div class="bar"></div></div>';
         },
 
+        /*complexpassword = function () {
+            return '<div class="container complexpassword">\n' +
+                '<div class="result">\n' +
+                '\t\t<div class="result__title field-title">Generated Password</div>\n' +
+                '\t\t<div class="result__info right">click to copy</div>\n' +
+                '\t\t<div class="result__info left">copied</div>\n' +
+                '\t\t<div class="result__viewbox" id="result">CLICK GENERATE</div>\n' +
+                '\t\t<button id="copy-btn" style="--x: 0; --y: 0"><i class="far fa-copy"></i></button>\n' +
+                '\t</div>\n' +
+                '\t\n' +
+                '\t<div class="length range__slider" data-min="4" data-max="32">\n' +
+                '\t\t<div class="length__title field-title" data-length=\'0\'>length:</div>\n' +
+                '\t\t<input id="slider" type="range" min="4" max="32" value="16" />\n' +
+                '\t</div>\n' +
+                '\t\n' +
+                '\t<button class="btn generate" id="generate">Generate Password</button>\n';
+        },*/
         methods = {
             init: function (settings) {
                 var self = this,
@@ -330,17 +349,4 @@ jQuery(document).ready(function () {
         return result;
     };
 
-    $.fn.pswdchoose = function (method) {
-        var result;
-        if (methods[method]) {
-            result = methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof method === "object" || !method) {
-            result = methods.init.apply(this, arguments);
-        } else {
-            $.error("Method " + method + " does not exist on jQuery.pswdchoose");
-        }
-        return result;
-    };
-
 }(jQuery));
-
