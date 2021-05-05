@@ -87,7 +87,7 @@
                                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">Create New Password</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <button type="button" class="close closebutton" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
@@ -111,8 +111,13 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="password">Password</label>
-                                            <input type="password" class="form-control" id="password" name="password"
-                                                   placeholder="Enter password">
+                                            <input type="password" class="form-control" id="password"
+                                                   name="password"
+                                                   placeholder="Enter password" >
+                                            <div id="togglepasswordid">
+                                                <input type="checkbox" onclick="togglepassword()">Show Password
+                                            </div>
+
                                             <div id="messages"></div>
                                             <div id="complexpassword">
                                                 <form onsubmit="return false">
@@ -127,7 +132,7 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary newbutton"
+                                            <button type="button" class="btn btn-secondary closebutton"
                                                     data-dismiss="modal">
                                                 Close
                                             </button>

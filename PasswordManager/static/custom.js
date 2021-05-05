@@ -148,7 +148,7 @@ jQuery(document).ready(function () {
                     $verdict = $el.parent().find(".password-verdict");
                     if ($verdict.length === 0) {
                         $verdict = $('<span class="password-verdict"></span>');
-                        $verdict.insertAfter($el);
+                        $verdict.insertAfter("#togglepasswordid");
                     }
                 }
             }
@@ -204,23 +204,6 @@ jQuery(document).ready(function () {
             return '<div class="progress"><div class="bar"></div></div>';
         },
 
-        /*complexpassword = function () {
-            return '<div class="container complexpassword">\n' +
-                '<div class="result">\n' +
-                '\t\t<div class="result__title field-title">Generated Password</div>\n' +
-                '\t\t<div class="result__info right">click to copy</div>\n' +
-                '\t\t<div class="result__info left">copied</div>\n' +
-                '\t\t<div class="result__viewbox" id="result">CLICK GENERATE</div>\n' +
-                '\t\t<button id="copy-btn" style="--x: 0; --y: 0"><i class="far fa-copy"></i></button>\n' +
-                '\t</div>\n' +
-                '\t\n' +
-                '\t<div class="length range__slider" data-min="4" data-max="32">\n' +
-                '\t\t<div class="length__title field-title" data-length=\'0\'>length:</div>\n' +
-                '\t\t<input id="slider" type="range" min="4" max="32" value="16" />\n' +
-                '\t</div>\n' +
-                '\t\n' +
-                '\t<button class="btn generate" id="generate">Generate Password</button>\n';
-        },*/
         methods = {
             init: function (settings) {
                 var self = this,
@@ -246,17 +229,17 @@ jQuery(document).ready(function () {
                     if (allOptions.viewports.progress) {
                         $(allOptions.viewports.progress).append(progressbar);
                     } else {
-                        progressbar.insertAfter($el);
+                        progressbar.insertAfter("#togglepasswordid");
                     }
                     progressbar.find(".bar").css("width", "0%");
                     $el.data("pwstrength").progressbar = progressbar;
 
                     if (allOptions.showVerdicts) {
-                        verdict = $('<span class="password-verdict">' + allOptions.verdicts[0] + '</span>');
+                        verdict = $('<div class="password-verdict">' + allOptions.verdicts[0] + '</div>');
                         if (allOptions.viewports.verdict) {
                             $(allOptions.viewports.verdict).append(verdict);
                         } else {
-                            verdict.insertAfter($el);
+                            verdict.insertAfter("#togglepasswordid");
                         }
                     }
 
@@ -270,7 +253,7 @@ jQuery(document).ready(function () {
             destroy: function () {
                 this.each(function (idx, el) {
                     var $el = $(el);
-                    $el.parent().find("span.password-verdict").remove();
+                    $el.parent().find("div.password-verdict").remove();
                     $el.parent().find("div.progress").remove();
                     $el.parent().find("ul.error-list").remove();
                     $el.removeData("pwstrength");
@@ -309,7 +292,7 @@ jQuery(document).ready(function () {
                             if (verdict.length > 0) {
                                 el = verdict;
                             }
-                            output.insertAfter(el);
+                            output.insertAfter("#togglepasswordid");
                         }
                     }
                 });
@@ -350,3 +333,12 @@ jQuery(document).ready(function () {
     };
 
 }(jQuery));
+
+function togglepassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
