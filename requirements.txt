@@ -1,0 +1,8 @@
+pytest~=6.2.3
+PasswordManager~=1.0.0
+Flask~=1.1.2
+setuptools~=54.2.0
+click~=7.1.2
+Werkzeug~=1.0.1
+hashID~=3.1.4
+cryptography~=3.4.7

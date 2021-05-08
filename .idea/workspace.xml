@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/chosenpassword.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DissertationPasswordManager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DissertationPasswordManager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/21f017f6-e2ec-4a67-ae1e-0c4d39b1d561.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/21f017f6-e2ec-4a67-ae1e-0c4d39b1d561.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/static/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/static/passwordgenerator.css" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/passwordgenerator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/selectpassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/selectpassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +110,29 @@
       <recent name="C:\Users\harry\PycharmProjects\DisserationPasswordManager\flaskr" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_auth.test_login">
+  <component name="RunManager" selected="Python.manager">
+    <configuration name="manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DissertationPasswordManager" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PasswordManager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PasswordManager/manager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="DisserationPasswordManager" type="Python.FlaskServer">
       <option name="flaskDebug" value="true" />
       <module name="DissertationPasswordManager" />
@@ -184,38 +217,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_auth.test_register_validate_input" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="DissertationPasswordManager" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_auth.test_register_validate_input&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Flask server.DisserationPasswordManager" />
+      <item itemvalue="Python.manager" />
       <item itemvalue="Python tests.pytest for test_auth.test_login" />
       <item itemvalue="Python tests.pytest for test_auth.test_register" />
-      <item itemvalue="Python tests.pytest for test_auth.test_register_validate_input" />
       <item itemvalue="Python tests.pytest for test_auth.test_login_validate_input" />
       <item itemvalue="Python tests.pytest for test_auth.test_logout" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.manager" />
         <item itemvalue="Python tests.pytest for test_auth.test_login" />
         <item itemvalue="Python tests.pytest for test_auth.test_register" />
         <item itemvalue="Python tests.pytest for test_auth.test_logout" />
         <item itemvalue="Python tests.pytest for test_auth.test_login_validate_input" />
-        <item itemvalue="Python tests.pytest for test_auth.test_register_validate_input" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +279,16 @@
       <workItem from="1619983460487" duration="5236000" />
       <workItem from="1620045282598" duration="22260000" />
       <workItem from="1620130037836" duration="11056000" />
-      <workItem from="1620213309365" duration="8735000" />
+      <workItem from="1620213309365" duration="23588000" />
+      <workItem from="1620251691235" duration="5592000" />
+      <workItem from="1620258841459" duration="354000" />
+      <workItem from="1620304458969" duration="15625000" />
+      <workItem from="1620338628908" duration="30000" />
+      <workItem from="1620391071700" duration="20657000" />
+      <workItem from="1620422949427" duration="47000" />
+      <workItem from="1620428662075" duration="1436000" />
+      <workItem from="1620475291907" duration="3000" />
+      <workItem from="1620506049669" duration="7952000" />
     </task>
     <servers />
   </component>
@@ -283,6 +308,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/jinja2/__init__.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <inline-watch fileUrl="file://$PROJECT_DIR$/tests/test_auth.py" line="43">
         <watch expression="auth" language="Python" />
@@ -294,6 +328,7 @@
     <SUITE FILE_PATH="coverage/DissertationPasswordManager$pytest_for_test_auth_test_login.coverage" NAME="pytest for test_auth.test_login Coverage Results" MODIFIED="1619210568306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$pytest_for_test_factory_test_index.coverage" NAME="pytest for test_factory.test_index Coverage Results" MODIFIED="1618677096525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$pytest_for_test_factory_test_config.coverage" NAME="pytest for test_factory.test_config Coverage Results" MODIFIED="1618676397860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/DissertationPasswordManager$manager.coverage" NAME="manager Coverage Results" MODIFIED="1620417720538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PasswordManager" />
     <SUITE FILE_PATH="coverage/DisserationPasswordManager$conftest.coverage" NAME="conftest Coverage Results" MODIFIED="1618250481792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DissertationPasswordManager$pytest_for_test_auth_test_login_validate_input.coverage" NAME="pytest for test_auth.test_login_validate_input Coverage Results" MODIFIED="1619208804501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/DissertationPasswordManager$pytest_for_test_auth_test_register.coverage" NAME="pytest for test_auth.test_register Coverage Results" MODIFIED="1619208834524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />

@@ -342,3 +342,7 @@ function togglepassword() {
     x.type = "password";
   }
 }
+
+$('#newPassword').on('hidden.bs.modal',function (){
+    $(this).find('form').trigger('reset');
+});

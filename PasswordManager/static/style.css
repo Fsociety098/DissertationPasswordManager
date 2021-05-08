@@ -201,7 +201,7 @@ body {
 }
 
 .choose-password {
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .row-choose-password {
@@ -258,3 +258,25 @@ div.pass-hint {
 }
 
 
+.pointer {
+  cursor: pointer;
+}
+
+/* Optional Styling */
+
+.clickable-row {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.clickable-row:hover {
+  background: #fafafa;
+}
+
+a {
+  font-size: 1.2rem;
+  color: #d60e96;
+}
+
+a:hover {
+  text-decoration: none;
+}

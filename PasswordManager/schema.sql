@@ -15,6 +15,7 @@ CREATE TABLE category (
 
 CREATE TABLE passwordinfo(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    passwordIDEncrypted TEXT NOT NULL,
     website TEXT,
     username TEXT,
     titlename TEXT,
