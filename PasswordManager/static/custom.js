@@ -335,14 +335,64 @@ jQuery(document).ready(function () {
 }(jQuery));
 
 function togglepassword() {
-  var x = document.getElementById("password");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
 }
 
-$('#newPassword').on('hidden.bs.modal',function (){
+$('#newPassword').on('hidden.bs.modal', function () {
     $(this).find('form').trigger('reset');
 });
+
+function passwordclick() {
+
+    $(document).ready(function () {
+        if (document.contains(document.getElementById('copy'))) {
+            document.getElementById('copy').remove()
+        }
+        ;
+
+        if
+        ($('#show_hide_password input').attr("type") == "text") {
+            $('#show_hide_password input').attr('type', 'password');
+            $('#show_hide_password i').addClass("fa-eye-slash");
+            $('#show_hide_password i').removeClass("fa-eye");
+
+        } else if ($('#show_hide_password input').attr("type") == "password") {
+            $('#show_hide_password input').attr('type', 'text');
+            $('#show_hide_password i').removeClass("fa-eye-slash");
+            $('#show_hide_password i').addClass("fa-eye");
+            let a = document.createElement('a');
+            console.log(a)
+            a.setAttribute('onclick', 'copy()');
+            console.log(a)
+            a.setAttribute('class', 'bd');
+            a.setAttribute('id', 'copy');
+            a.innerHTML = ('<i class="fa fa-clipboard"></i>');
+            $("#showpasswords").append(a);
+
+
+        }
+    });
+}
+
+function copy() {
+    /* Get the text field */
+    var copyText = document.getElementById("passwordact");
+    /* Select the text field */
+    copyText.select();
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+    let alertbox = document.getElementById('passwordcopyied');
+    alertbox.innerHTML = "Copied!";
+    alertbox.classList.add('success');
+    setTimeout(function () {
+        alertbox.classList.remove('success');
+        alertbox.innerHTML = "";
+    }, 3000);
+    console.log(setTimeout)
+}
+

@@ -179,8 +179,9 @@ def selectPassword(id):
 
     passwordchosen = db.execute(
         "SELECT u.id, info.userid, info.titlename, info.username, info.lastmodified, "
-        "info.passwordIDEncrypted, info.password, info.created_timestamp, "
-        "info.lastmodified, cP.id, cP.categoryName "
+        "info.passwordIDEncrypted, info.website, info.password,strftime('%d/%m/%Y', info.created_timestamp) "
+        "as created_timestamp, "
+        "strftime('%d-%m-%Y', info.lastmodified) as lastmodified_date, cP.id, cP.categoryName "
         "FROM passwordinfo info  JOIN user u on info.userid = u.id"
         " JOIN category cP on info.category_id = cP.id WHERE u.id = ? "
         "AND info.passwordIDEncrypted = ?", (user_id, hashedurl))
