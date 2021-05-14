@@ -74,7 +74,7 @@ jQuery(document).ready(function () {
                     var findword = word;
                     let setflag = false;
                     $.ajaxSetup({async: false});
-                    $.getJSON('../../static/knownpassword.json', function (data) {
+                    $.getJSON('../../../static/knownpassword.json', function (data) {
                         $.each(data, function (i, obj) {
                             if (findword === obj) {
                                 setflag = true
@@ -381,7 +381,7 @@ function passwordclick() {
 
 function copy() {
     /* Get the text field */
-    var copyText = document.getElementById("passwordact");
+    var copyText = document.getElementById("password");
     /* Select the text field */
     copyText.select();
     /* Copy the text inside the text field */
@@ -393,6 +393,5 @@ function copy() {
         alertbox.classList.remove('success');
         alertbox.innerHTML = "";
     }, 3000);
-    console.log(setTimeout)
 }
 

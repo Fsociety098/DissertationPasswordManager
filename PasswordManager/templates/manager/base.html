@@ -10,7 +10,7 @@
 </head>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('index') }}">
+        <a class="navbar-brand" href="{{ url_for('manager.index') }}">
             <img src="/static/images/placeholder.png" width=120 height="30" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -108,8 +108,6 @@
                                             <label for="website">Website</label>
                                             <input type="text" class="form-control" id="website" name="website"
                                                    aria-describedby="websitehelp" placeholder="Enter website">
-                                            <small id="websitehelp" class="form-text text-muted">API Website Secure?
-                                                Yes/No</small>
                                         </div>
                                         <div class="form-group">
                                             <label for="username">Username</label>
@@ -126,10 +124,12 @@
                                             </div>
 
                                             <div id="messages"></div>
-                                            <div id="complexpassword">
-                                                <form onsubmit="return false">
-                                                    {% include 'manager/passwordgenerator.html' %}
-                                                </form>
+                                            <div class="form-group">
+                                                <div id="complexpassword">
+                                                    <form onsubmit="return false">
+                                                        {% include 'manager/passwordgenerator.html' %}
+                                                    </form>
+                                                </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputState">Category</label>
@@ -184,12 +184,13 @@
                     </div>
                 </div>
                 <div class="col-7 passwordsearch">
+
                     <div class="search">
-                        <button type="button" class="btn btn-secondary editbutton" data-bs-target="#">Edit</button>
                     </div>
+
                     <div class="passwordselected container">
-                            {% block choosenPassword %}
-                            {% endblock choosenPassword %}
+                        {% block choosenPassword %}
+                        {% endblock choosenPassword %}
                     </div>
                 </div>
             </div>
