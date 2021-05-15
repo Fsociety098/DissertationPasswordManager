@@ -5,8 +5,8 @@ from flask import (
     Blueprint, render_template, request, session, redirect, url_for, flash
 )
 
-from PasswordManager.db import get_db
 from PasswordManager.auth import login_required
+from PasswordManager.db import get_db
 
 bp = Blueprint('manager', __name__, url_prefix='/manager')
 
