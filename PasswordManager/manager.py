@@ -6,6 +6,7 @@ from flask import (
 )
 
 from PasswordManager.db import get_db
+from PasswordManager.auth import login_required
 
 bp = Blueprint('manager', __name__, url_prefix='/manager')
 
@@ -46,6 +47,7 @@ def categoriesform():
 
 
 @bp.route('/index', methods=('GET', 'POST'))
+@login_required
 def index():
     passwords = passwordfunc()
     categories = categoriesfunc()
@@ -56,6 +58,7 @@ def index():
 
 
 @bp.route('/sort/asc', methods=('GET', 'POST'))
+@login_required
 def asc():
     db = get_db()
     user_id = session.get('user_id')
@@ -72,6 +75,7 @@ def asc():
 
 
 @bp.route('/sort/desc', methods=('GET', 'POST'))
+@login_required
 def desc():
     db = get_db()
     user_id = session.get('user_id')
@@ -86,6 +90,7 @@ def desc():
 
 
 @bp.route('/sort/last-modified', methods=('GET', 'POST'))
+@login_required
 def lastmodified():
     db = get_db()
     user_id = session.get('user_id')
@@ -101,6 +106,7 @@ def lastmodified():
 
 
 @bp.route('/sort/last-created', methods=('GET', 'POST'))
+@login_required
 def lastcreated():
     db = get_db()
     user_id = session.get('user_id')
@@ -117,6 +123,7 @@ def lastcreated():
 
 
 @bp.route('/category/<id>', methods=('GET', 'POST'))
+@login_required
 def category(id):
     db = get_db()
     user_id = session.get('user_id')
@@ -134,6 +141,7 @@ def category(id):
 
 
 @bp.route('/add', methods=('GET', 'POST'))
+@login_required
 def newpassword():
     if request.method == 'POST':
         error = None
@@ -164,6 +172,7 @@ def newpassword():
 
 
 @bp.route('/select/<id>', methods=('GET', 'POST'))
+@login_required
 def selectPassword(id):
     db = get_db()
     cur = db.cursor()
@@ -185,7 +194,7 @@ def selectPassword(id):
         "SELECT u.id, info.userid, info.titlename, info.username, info.lastmodified, "
         "info.passwordIDEncrypted, info.website, info.password,strftime('%d/%m/%Y', info.created_timestamp) "
         "as created_timestamp, "
-        "strftime('%d-%m-%Y', info.lastmodified) as lastmodified_date, cP.id, cP.categoryName "
+        "strftime('%d/%m/%Y', info.lastmodified) as lastmodified_date, cP.id, cP.categoryName "
         "FROM passwordinfo info  JOIN user u on info.userid = u.id"
         " JOIN category cP on info.category_id = cP.id WHERE u.id = ? "
         "AND info.passwordIDEncrypted = ?", (user_id, hashedurl))
@@ -196,6 +205,7 @@ def selectPassword(id):
 
 
 @bp.route('/select/<id>/edit', methods=('GET', 'POST'))
+@login_required
 def editpassword(id):
     db = get_db()
     cur = db.cursor()
@@ -224,7 +234,7 @@ def editpassword(id):
         "SELECT u.id, info.userid, info.titlename, info.username, info.lastmodified, "
         "info.passwordIDEncrypted, info.website, info.password,strftime('%d/%m/%Y', info.created_timestamp) "
         "as created_timestamp, "
-        "strftime('%d-%m-%Y', info.lastmodified) as lastmodified_date, cP.id, cP.categoryName "
+        "strftime('%d/%m/%Y', info.lastmodified) as lastmodified_date, cP.id, cP.categoryName "
         "FROM passwordinfo info  JOIN user u on info.userid = u.id"
         " JOIN category cP on info.category_id = cP.id WHERE u.id = ? "
         "AND info.passwordIDEncrypted = ?", (user_id, hashedurl))
@@ -235,6 +245,7 @@ def editpassword(id):
 
 
 @bp.route('/select/<id>/save', methods=('GET', 'POST'))
+@login_required
 def savepassword(id):
     db = get_db()
     user_id = session.get('user_id')
@@ -259,6 +270,7 @@ def savepassword(id):
 
 
 @bp.route('/select/<id>/delete', methods=('GET', 'POST'))
+@login_required
 def deletepassword(id):
     db = get_db()
     user_id = session.get('user_id')
@@ -274,6 +286,7 @@ def deletepassword(id):
 
 
 @bp.route('/manager/categorynew', methods=('GET', 'POST'))
+@login_required
 def newcategory():
     db = get_db()
     user_id = session.get('user_id')
@@ -288,6 +301,7 @@ def newcategory():
 
 
 @bp.route('/delete', methods=('GET', 'POST'))
+@login_required
 def deletecategory():
     db = get_db()
     user_id = session.get('user_id')
@@ -302,6 +316,7 @@ def deletecategory():
 
 
 @bp.route('/update', methods=('GET', 'POST'))
+@login_required
 def updatecategory():
     db = get_db()
     user_id = session.get('user_id')
