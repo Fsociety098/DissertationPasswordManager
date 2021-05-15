@@ -1,6 +1,7 @@
 import functools
 import re
 
+
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
@@ -79,6 +80,7 @@ def login():
         if error is None:
             session.clear()
             session['user_id'] = user['id']
+            session.permanent = True
             return redirect(url_for('home'))
 
         flash(error)

@@ -11,7 +11,7 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url_for('manager.index') }}">
-            <img src="/static/images/placeholder.png" width=120 height="30" alt="">
+            <img src="/static/images/Logo.png" id="logo" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -256,5 +256,6 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='custom.js') }}"></script>
+
 <script src="{{ url_for('static', filename='knownpassword.json') }}"></script>
 </html>
