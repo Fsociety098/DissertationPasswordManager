@@ -68,10 +68,55 @@
         <div class="container-fluid">
             <div class="row row-custom">
                 <div class="col-2 category">
+                    <button type="button" class="btn btn-secondary newbutton categorynew" data-toggle="modal"
+                            data-target="#newCategory">
+                        <i class="fa fa-plus"></i>
+                    </button>
                     <div class="sub-title">Category
+                    </div>
+                    <div>
                         {% include 'manager/category.html' %}
                     </div>
                 </div>
+                <!-- Modal NEW CATEGORY -->
+                <div class="modal fade" id="newCategory" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <form method="post" action="">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Create New Category</h5>
+                                    <button type="button" class="close closebutton" data-dismiss="modal"
+                                            aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="form-group">
+                                        <label for="titlename">Category Name</label>
+                                        <input type="text" class="form-control" id="categoryname" name="categoryname"
+                                               placeholder="Enter Category Name">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary closebutton close"
+                                                data-dismiss="modal">
+                                            Close
+                                        </button>
+                                        <a href="">
+                                            <button type="submit" class="btn btn-primary newbutton" data-target=""
+                                                    formaction="{{ url_for('manager.newcategory') }}">
+                                                Create Category
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-3 passwordsearch" style="border-right: 3px black solid">
                     <div class="search">
                         <input type="text" class="searchTerm" placeholder="Search">
@@ -83,7 +128,7 @@
                             New
                         </button>
                     </div>
-                    <!-- Modal -->
+                    <!-- Modal NEW PASSWORD -->
                     <div class="modal fade" id="newPassword" tabindex="-1" role="dialog"
                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
@@ -156,6 +201,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Modal END NEW PASSWORD -->
                     <div class="dropdown filtermenu">
                         <a class="btn btn-secondary dropdown-toggle filterbutton" role="button"
                            id="dropdownMenuLink" data-toggle="dropdown"

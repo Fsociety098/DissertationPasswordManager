@@ -1,6 +1,90 @@
+ <ul>
+        <div class="form-group row">
+            <div class="col-sm-10 categoryedit">
+                <li><a class=category-choose
+                       href="{{ url_for('manager.category', id=1) }}">Login
+                </a></li>
+            </div>
+        </div>
+    </ul>
+ <ul>
+        <div class="form-group row">
+            <div class="col-sm-10 categoryedit">
+                <li><a class=category-choose
+                       href="{{ url_for('manager.category', id=2) }}">Other
+                </a></li>
+            </div>
+        </div>
+    </ul>
+{% for category in categories %}
+    <ul>
+        <div class="form-group row">
+            <div class="col-sm-10 categoryedit">
+                <li><a class=category-choose
+                       href="{{ url_for('manager.category', id=category['id']) }}">{{ category['categoryName'] }}
+                </a></li>
+            </div>
+            <div class="col-sm-2 categoryedit">
+                <input hidden value="{{ category['id'] }}" name="categoryidforquery">
+                <button type="button" class="btn btn-secondary newbutton categorynew" data-toggle="modal"
+                        data-target="#editCategory{{ category['id'] }}">
+                    <i class=" fa fa-pencil"></i>
+                </button>
+            </div>
+        </div>
+    </ul>
+    <!-- Modal Edit Category -->
 
-    {% for category in categories %}
-        <ul>
-            <li><a class=category-choose href="{{ url_for('manager.category', id=category['id'])}}">{{category['categoryName']}}</a></li>
-        </ul>
-    {% endfor %}
+    <div class="modal fade" id="editCategory{{ category['id'] }}"
+         aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="post" action="">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit Categories</h5>
+                        <button type="button" class="close closebutton" data-dismiss="modal"
+                                aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="titlename">Category Names:</label>
+                                <div class="form-group row">
+                                    <div class="col-sm-8">
+                                        <input type="hidden" name="categoryID"
+                                               value="{{ category['id'] }}">
+                                        <input type="text" class="form-control"
+                                               id="categoryname"
+                                               name="categoryname"
+                                               value="{{ category['categoryName'] }}">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="hidden" value="{{ category['id'] }}" name="categoryid">
+                                        <button type="submit" class="btn btn-danger" data-target=""
+                                                formaction="{{ url_for('manager.deletecategory') }}">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary closebutton close"
+                                    data-dismiss="modal">
+                                Close
+                            </button>
+                            <a href="">
+                                <button type="submit" class="btn btn-primary newbutton" data-target=""
+                                        formaction="{{ url_for('manager.updatecategory') }}">
+                                    Save Changes
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal END Edit Category -->
+{% endfor %}

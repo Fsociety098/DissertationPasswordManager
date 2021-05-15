@@ -31,7 +31,7 @@ def categoriesfunc():
     db = get_db()
     user_id = session.get('user_id')
     categories = db.execute(
-        "SELECT categoryName, id FROM category WHERE userID = 0 or userID = ?", (user_id,))
+        "SELECT categoryName, id FROM category WHERE userID = ?", (user_id,))
 
     return categories
 
@@ -50,6 +50,7 @@ def index():
     passwords = passwordfunc()
     categories = categoriesfunc()
     categoriesforms = categoriesform()
+
     return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
                            categoryforms=categoriesforms)
 
@@ -58,14 +59,16 @@ def index():
 def asc():
     db = get_db()
     user_id = session.get('user_id')
-    categories = categoriesfunc()
     categoriesforms = categoriesform()
+    categories = categoriesfunc()
+
     passwords = db.execute(
         'SELECT info.userid,info.id, info.titlename, info.username, info.passwordIDEncrypted FROM passwordinfo info '
         'JOIN user u on info.userid = u.id'
-        ' WHERE u.id = ? ORDER BY titlename asc ', (user_id,))
-    return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
-                           categoryforms=categoriesform, edit=False)
+        ' WHERE u.id = ? ORDER BY info.titlename asc ', (user_id,))
+
+    return render_template('manager/selectpassword.html', categoryforms=categoriesforms, passwords=passwords,
+                           categories=categories, edit=False)
 
 
 @bp.route('/sort/desc', methods=('GET', 'POST'))
@@ -265,6 +268,49 @@ def deletepassword(id):
         db.execute(
             "DELETE FROM passwordinfo WHERE userid = ? AND passwordIDEncrypted = ?",
             (user_id, hashedurl)
+        )
+        db.commit()
+    return redirect(url_for('manager.index'))
+
+
+@bp.route('/manager/categorynew', methods=('GET', 'POST'))
+def newcategory():
+    db = get_db()
+    user_id = session.get('user_id')
+
+    if request.method == 'POST':
+        formcategoryname = request.form['categoryname']
+        db.execute(
+            "INSERT INTO category (categoryName, userID) VALUES (?, ?)", (formcategoryname, user_id)
+        )
+        db.commit()
+    return redirect(url_for('manager.index'))
+
+
+@bp.route('/delete', methods=('GET', 'POST'))
+def deletecategory():
+    db = get_db()
+    user_id = session.get('user_id')
+    categoryid = request.form['categoryid']
+    if request.method == 'POST':
+        db.execute(
+            "DELETE FROM category WHERE userid = ? AND id = ?",
+            (user_id, categoryid)
+        )
+        db.commit()
+    return redirect(url_for('manager.index'))
+
+
+@bp.route('/update', methods=('GET', 'POST'))
+def updatecategory():
+    db = get_db()
+    user_id = session.get('user_id')
+    categoryid = request.form['categoryid']
+    categoryname = request.form['categoryname']
+    if request.method == 'POST':
+        db.execute(
+            "UPDATE category SET categoryName = ? WHERE userid = ? AND id = ?",
+            (categoryname, user_id, categoryid)
         )
         db.commit()
     return redirect(url_for('manager.index'))
