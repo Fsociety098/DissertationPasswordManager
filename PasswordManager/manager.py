@@ -59,14 +59,16 @@ def index():
 def asc():
     db = get_db()
     user_id = session.get('user_id')
-    categories = categoriesfunc()
     categoriesforms = categoriesform()
+    categories = categoriesfunc()
+
     passwords = db.execute(
         'SELECT info.userid,info.id, info.titlename, info.username, info.passwordIDEncrypted FROM passwordinfo info '
         'JOIN user u on info.userid = u.id'
-        ' WHERE u.id = ? ORDER BY titlename asc ', (user_id,))
-    return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
-                           categoryforms=categoriesform, edit=False)
+        ' WHERE u.id = ? ORDER BY info.titlename asc ', (user_id,))
+
+    return render_template('manager/selectpassword.html', categoryforms=categoriesforms, passwords=passwords,
+                           categories=categories, edit=False)
 
 
 @bp.route('/sort/desc', methods=('GET', 'POST'))
