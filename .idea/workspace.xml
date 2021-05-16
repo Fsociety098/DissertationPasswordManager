@@ -9,8 +9,8 @@
       <change beforePath="$PROJECT_DIR$/PasswordManager/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
-=======
->>>>>>> d927bf5e2b64a5b67cc9de9b3d2d8df76354569e
+      =======
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; d927bf5e2b64a5b67cc9de9b3d2d8df76354569e
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,8 +212,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.manager" />
       <item itemvalue="Flask server.DisserationPasswordManager" />
+      <item itemvalue="Python.manager" />
       <item itemvalue="Python tests.pytest for test_auth.test_login" />
       <item itemvalue="Python tests.pytest for test_auth.test_login_validate_input" />
       <item itemvalue="Python tests.pytest for test_auth.test_logout" />
