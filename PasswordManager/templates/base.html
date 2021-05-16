@@ -38,10 +38,6 @@
                             Logged in as {{ g.user['fName'] }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Account</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
                             <li><a class="dropdown-item" href="{{ url_for('manager.index') }}">Password Vault</a></li>
                         </ul>
                         {% if g.user %}
