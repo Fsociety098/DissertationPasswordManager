@@ -337,3 +337,19 @@ select.minimal {
 .categoryedit{
     align-items: center;
 }
+
+.quickheading{
+    text-align: center;
+
+}
+
+.headingrow{
+    padding: 1em;
+    margin: 2em;
+}
+
+svg.defs-only {
+    display:block; position: absolute;
+    height:0; width:0; margin: 0; padding: 0;
+    border: none; overflow: hidden;
+}
