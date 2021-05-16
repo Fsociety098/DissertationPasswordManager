@@ -332,10 +332,16 @@ def deletecategory():
     categoryid = request.form['categoryid']
     if request.method == 'POST':
         db.execute(
-            "DELETE FROM category WHERE userid = ? AND id = ?",
+            " UPDATE passwordinfo SET category_id = '1' WHERE category_id = ? AND userid = ?",
+            (categoryid, user_id)
+        )
+        db.commit()
+        db.execute(
+            "DELETE FROM category WHERE userid = ? AND id = ? ",
             (user_id, categoryid)
         )
         db.commit()
+
     return redirect(url_for('manager.index'))
 
 

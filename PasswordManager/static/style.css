@@ -354,3 +354,11 @@ svg.defs-only {
     height:0; width:0; margin: 0; padding: 0;
     border: none; overflow: hidden;
 }
+.container-error{
+    height: 100%;
+    width: 100%;
+}
+.errorpage{
+    margin-top: 20em;
+    text-align: center;
+}

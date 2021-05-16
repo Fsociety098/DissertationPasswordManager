@@ -4,7 +4,6 @@
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -14,7 +13,7 @@
           <div class="carousel-caption text-start">
             <h1>Welcome to SAFEPASS</h1>
             <p>You can view the Quick Start Guide by clicking below</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Quick Start</a></p>
+            <p><a class="btn btn-lg btn-primary" href="{{ url_for('info.quickstart') }}">Quick Start</a></p>
           </div>
         </div>
       </div>
