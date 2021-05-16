@@ -118,8 +118,9 @@
                 </div>
 
                 <div class="col-3 passwordsearch" style="border-right: 3px black solid">
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="Search">
+                    <form action="{{ url_for('manager.search') }}" method="post" class="search">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                        <input type="text" class="searchTerm" name="search" placeholder="Search">
                         <button type="submit" class="searchButton">
                             <i class="fa fa-search"></i>
                         </button>
@@ -127,7 +128,7 @@
                                 data-target="#newPassword">
                             New
                         </button>
-                    </div>
+                    </form>
                     <!-- Modal NEW PASSWORD -->
                     <div class="modal fade" id="newPassword" tabindex="-1" role="dialog"
                          aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -230,6 +231,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-7 passwordsearch">
 
                     <div class="search">

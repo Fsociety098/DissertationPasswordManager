@@ -57,6 +57,30 @@ def index():
                            categoryforms=categoriesforms)
 
 
+@bp.route('/search', methods=('GET', 'POST'))
+@login_required
+def search():
+    user_id = session.get('user_id')
+    categories = categoriesfunc()
+    categoriesforms = categoriesform()
+    if request.method == 'POST':
+        searchreq = '%' + request.form['search'] + '%'
+    if searchreq == '%%':
+        return redirect(url_for('manager.index'))
+    else:
+
+        db = get_db()
+        passwords = db.execute(
+            " SELECT info.userid,info.id, info.titlename, info.username, info.lastmodified, "
+            "info.passwordIDEncrypted FROM passwordinfo info "
+            " JOIN user u on info.userid = u.id "
+            " WHERE u.id = ? AND info.titlename LIKE ? OR info.website LIKE ? OR info.username LIKE ?",
+            (user_id, searchreq, searchreq, searchreq))
+
+        return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
+                               categoryforms=categoriesforms, edit=False)
+
+
 @bp.route('/sort/asc', methods=('GET', 'POST'))
 @login_required
 def asc():

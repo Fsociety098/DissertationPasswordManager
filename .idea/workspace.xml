@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PasswordManager/info.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/static/images/Register.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/static/images/number1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/static/images/number2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/static/images/number3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordManager/templates/quickstart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flaskenv" beforeDir="false" afterPath="$PROJECT_DIR$/.flaskenv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/auth/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +290,7 @@
       <workItem from="1621028040509" duration="31000" />
       <workItem from="1621081194533" duration="274000" />
       <workItem from="1621081481835" duration="1666000" />
-      <workItem from="1621167472853" duration="13576000" />
+      <workItem from="1621167472853" duration="17141000" />
     </task>
     <servers />
   </component>
