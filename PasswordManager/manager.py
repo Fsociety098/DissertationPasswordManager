@@ -124,7 +124,7 @@ def lastmodified():
         'SELECT info.userid,info.id, info.titlename, info.username, info.lastmodified, info.passwordIDEncrypted '
         'FROM passwordinfo info'
         ' JOIN user u on info.userid = u.id '
-        ' WHERE u.id = ? ORDER BY lastmodified desc ', (user_id,))
+        ' WHERE u.id = ? ORDER BY info.lastmodified desc ', (user_id,))
     return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
                            categoryforms=categoriesforms, edit=False)
 
@@ -136,12 +136,11 @@ def lastcreated():
     user_id = session.get('user_id')
     categories = categoriesfunc()
     categoriesforms = categoriesform()
-    error = None
-
     passwords = db.execute(
-        'SELECT info.userid,info.id, info.titlename, info.username, info.passwordIDEncrypted FROM passwordinfo info '
-        'JOIN user u on info.userid = u.id '
-        ' WHERE u.id = ? ORDER BY created_timestamp desc ', (user_id,))
+        'SELECT info.userid,info.id, info.titlename, info.username, info.created_timestamp, info.passwordIDEncrypted '
+        'FROM passwordinfo info'
+        ' JOIN user u on info.userid = u.id '
+        ' WHERE u.id = ? ORDER BY info.created_timestamp asc', (user_id,))
     return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
                            categoryforms=categoriesforms, edit=False)
 

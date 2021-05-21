@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.flaskenv" beforeDir="false" afterPath="$PROJECT_DIR$/.flaskenv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/21f017f6-e2ec-4a67-ae1e-0c4d39b1d561.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/21f017f6-e2ec-4a67-ae1e-0c4d39b1d561/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/911254fa-cf0f-44dd-9bfe-d535ffbfdfc9.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/blog.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PasswordManager/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_blog.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/static/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/chosenpassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/chosenpassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +295,7 @@
       <workItem from="1621342333842" duration="5215000" />
       <workItem from="1621430568889" duration="9058000" />
       <workItem from="1621600396077" duration="759000" />
-      <workItem from="1621603255861" duration="322000" />
+      <workItem from="1621603255861" duration="2934000" />
     </task>
     <servers />
   </component>

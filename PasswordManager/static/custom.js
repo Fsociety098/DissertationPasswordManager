@@ -381,11 +381,12 @@ function passwordclick() {
 
 function copy() {
     /* Get the text field */
-    var copyText = document.getElementById("password");
+    var copyText = document.getElementById("passwordact");
     /* Select the text field */
     copyText.select();
     /* Copy the text inside the text field */
     document.execCommand("copy");
+
     let alertbox = document.getElementById('passwordcopyied');
     alertbox.innerHTML = "Copied!";
     alertbox.classList.add('success');
