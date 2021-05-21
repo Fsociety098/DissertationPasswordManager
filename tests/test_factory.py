@@ -8,4 +8,4 @@ def test_config():
 
 def test_index(client):
     response = client.get('/')
-    assert b'<h1>Example headline.</h1>' in response.data
+    assert b'<div id="myCarousel" class="carousel slide carousel-height" data-bs-ride="carousel">' in response.data

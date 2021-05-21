@@ -174,8 +174,8 @@ def newpassword():
         formwebsite = request.form['website']
         formusername = request.form['username']
         formpassword = request.form['password']
-        formpasswordbytes = bytes(formpassword, 'utf-8')
         categoryform = request.form['category']
+        formpasswordbytes = bytes(formpassword, 'utf-8')
         uniqueid = uuid.uuid4().hex
         if formtitlename == '':
             formtitlename = formwebsite

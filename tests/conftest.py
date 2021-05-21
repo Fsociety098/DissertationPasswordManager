@@ -2,10 +2,13 @@ import os
 import tempfile
 
 import pytest
+from flask_wtf.csrf import CSRFProtect
+
 import PasswordManager
 from PasswordManager import create_app
 from PasswordManager.db import init_db
 
+csrf = CSRFProtect()
 
 with open(os.path.join(os.path.dirname(__file__), 'data.sql'), 'rb') as f:
     _data_sql = f.read().decode('utf8')
@@ -18,7 +21,7 @@ def app():
     db_fd, db_path = tempfile.mkstemp()
     # create the app with common test config
     app = create_app({"TESTING": True, "DATABASE": db_path})
-
+    app.config['WTF_CSRF_METHODS'] = []
     # create the database and load test data
     with app.app_context():
         init_db()
@@ -46,10 +49,10 @@ class AuthActions(object):
     def __init__(self, client):
         self._client = client
 
-    def login(self, userEmail='test@test.com', secureKey='test', password='password1@A'):
+    def login(self, userEmail='test@test.com', secureKey='test', password='password@1A'):
         return self._client.post(
             '/auth/login',
-            data={'userEmail': userEmail, 'secureKey': secureKey, 'manager': password}
+            data={'userEmail': userEmail, 'secureKey': secureKey, 'password': password}
         )
 
     def logout(self):
