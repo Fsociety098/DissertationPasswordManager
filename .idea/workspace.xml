@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/static/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/chosenpassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/chosenpassword.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -295,7 +292,12 @@
       <workItem from="1621342333842" duration="5215000" />
       <workItem from="1621430568889" duration="9058000" />
       <workItem from="1621600396077" duration="759000" />
-      <workItem from="1621603255861" duration="2934000" />
+      <workItem from="1621603255861" duration="4768000" />
+      <workItem from="1621621157126" duration="616000" />
+      <workItem from="1621693935130" duration="208000" />
+      <workItem from="1621700924866" duration="1034000" />
+      <workItem from="1621716996549" duration="348000" />
+      <workItem from="1621779829628" duration="88000" />
     </task>
     <servers />
   </component>
