@@ -1,7 +1,5 @@
-import time
-
 import pytest
-from flask import session, g
+from flask import session
 
 import PasswordManager
 

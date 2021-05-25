@@ -26,7 +26,6 @@ def create_app(test_config=None):
         # load the test config if passed in
         app.config.update(test_config)
 
-    # ensure the instance folder exists
     try:
         os.makedirs(app.instance_path)
     except OSError:
@@ -34,17 +33,17 @@ def create_app(test_config=None):
 
     @app.errorhandler(404)
     def page_not_found(e):
-        # note that we set the 404 status explicitly
+        #  404 status
         return render_template('404.html'), 404
 
     @app.errorhandler(500)
     def page_not_found(e):
-        # note that we set the 500 status explicitly
+        #  500 status
         return render_template('500.html'), 500
 
     @app.errorhandler(403)
     def page_not_found(e):
-        # note that we set the 403 status explicitly
+        #  403 status
         return render_template('403.html'), 403
 
         # homepage

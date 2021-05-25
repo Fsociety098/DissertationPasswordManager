@@ -60,7 +60,6 @@ def index():
 @bp.route('/search', methods=('GET', 'POST'))
 @login_required
 def search():
-    user_id = session.get('user_id')
     categories = categoriesfunc()
     categoriesforms = categoriesform()
     if request.method == 'POST':
@@ -71,11 +70,12 @@ def search():
 
         db = get_db()
         passwords = db.execute(
-            " SELECT info.userid,info.id, info.titlename, info.username, info.lastmodified, "
-            "info.passwordIDEncrypted FROM passwordinfo info "
-            " JOIN user u on info.userid = u.id "
-            " WHERE u.id = ? AND info.titlename LIKE ? OR info.website LIKE ? OR info.username LIKE ?",
-            (user_id, searchreq, searchreq, searchreq))
+            "SELECT info.userid,info.id, info.titlename, info.username, info.lastmodified, info.passwordIDEncrypted "
+            "FROM passwordinfo info "
+            "WHERE info.titlename LIKE ? AND info.userid = ?"
+            "OR info.website LIKE ? AND info.userid = ?"
+            "OR info.username LIKE ? AND info.userid = ? ",
+            (searchreq, session.get('user_id'), searchreq, session.get('user_id'), searchreq, session.get('user_id'),))
 
         return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
                                categoryforms=categoriesforms, edit=False)
@@ -140,7 +140,7 @@ def lastcreated():
         'SELECT info.userid,info.id, info.titlename, info.username, info.created_timestamp, info.passwordIDEncrypted '
         'FROM passwordinfo info'
         ' JOIN user u on info.userid = u.id '
-        ' WHERE u.id = ? ORDER BY info.created_timestamp asc', (user_id,))
+        ' WHERE u.id = ? ORDER BY info.created_timestamp desc ', (user_id,))
     return render_template('manager/selectpassword.html', passwords=passwords, categories=categories,
                            categoryforms=categoriesforms, edit=False)
 

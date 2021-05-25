@@ -6,7 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="63833925-ed93-41da-9d87-9d15dc51b96f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/static/generatepassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/generatepassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/static/passwordgenerator.css" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/passwordgenerator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PasswordManager/templates/manager/chosenpasswordedit.html" beforeDir="false" afterPath="$PROJECT_DIR$/PasswordManager/templates/manager/chosenpasswordedit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/PasswordManager.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/instance/PasswordManager.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,9 +83,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="15.1.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="15.0.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/instance/PasswordManager.sqlite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -84,7 +96,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2020.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -298,6 +310,11 @@
       <workItem from="1621700924866" duration="1034000" />
       <workItem from="1621716996549" duration="348000" />
       <workItem from="1621779829628" duration="88000" />
+      <workItem from="1621784662094" duration="1196000" />
+      <workItem from="1621796870289" duration="626000" />
+      <workItem from="1621805645445" duration="401000" />
+      <workItem from="1621888900821" duration="604000" />
+      <workItem from="1621948863847" duration="6740000" />
     </task>
     <servers />
   </component>
@@ -328,7 +345,7 @@
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
-      <inline-watch fileUrl="file://$PROJECT_DIR$/tests/test_auth.py" line="59">
+      <inline-watch fileUrl="file://$PROJECT_DIR$/tests/test_auth.py" line="57">
         <watch expression="auth" language="Python" />
       </inline-watch>
     </watches-manager>

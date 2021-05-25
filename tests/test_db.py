@@ -1,6 +1,7 @@
 import sqlite3
 
 import pytest
+
 from PasswordManager.db import get_db
 
 

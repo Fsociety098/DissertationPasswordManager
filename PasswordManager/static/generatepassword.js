@@ -1,4 +1,4 @@
-var clipboard = new ClipboardJS('.copy',{
+var clipboard = new ClipboardJS('.copy', {
     container: document.getElementById('newPassword')
 });
 

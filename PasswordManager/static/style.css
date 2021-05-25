@@ -1,7 +1,8 @@
-#logo{
+#logo {
     height: 30px;
     width: 150px;
 }
+
 .carousel-height {
     height: 50%;
 }
@@ -246,7 +247,7 @@ body {
     font-family: Cambria;
 }
 
-.space{
+.space {
     margin: 1em;
 }
 
@@ -254,36 +255,38 @@ div.pass-bar {
     height: 11px;
     margin-top: 2px;
 }
+
 div.pass-hint {
     font-family: arial;
     font-size: 11px;
 }
+
 .closebutton {
     background-color: #6c757d;
 }
 
 
 .pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* Optional Styling */
 
 .clickable-row {
-  border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .clickable-row:hover {
-  background: #fafafa;
+    background: #fafafa;
 }
 
 a {
-  font-size: 1.2rem;
-  color: #d60e96;
+    font-size: 1.2rem;
+    color: #d60e96;
 }
 
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 
@@ -299,66 +302,69 @@ a:hover {
     right: 1em;
 }
 
-#passwordcopyied{
+#passwordcopyied {
     width: 50%;
     text-align: center;
 }
 
 
 select.minimal {
-  background-image:
-    linear-gradient(45deg, transparent 50%, gray 50%),
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
     linear-gradient(135deg, gray 50%, transparent 50%),
     linear-gradient(to right, #ccc, #ccc);
-  background-position:
-    calc(100% - 20px) calc(1em + 2px),
+    background-position: calc(100% - 20px) calc(1em + 2px),
     calc(100% - 15px) calc(1em + 2px),
     calc(100% - 2.5em) 0.5em;
-  background-size:
-    5px 5px,
+    background-size: 5px 5px,
     5px 5px,
     1px 1.5em;
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
-.form-group{
+.form-group {
     margin-bottom: 0.5em;
 }
 
-.editpasswordform{
+.editpasswordform {
     border-top: 1px grey solid;
 }
 
-.categorynew{
+.categorynew {
     margin-top: 1em;
-    margin-right: 0.5em
-;
+    margin-right: 0.5em;
 }
 
-.categoryedit{
+.categoryedit {
     align-items: center;
 }
 
-.quickheading{
+.quickheading {
     text-align: center;
 
 }
 
-.headingrow{
+.headingrow {
     padding: 1em;
     margin: 2em;
 }
 
 svg.defs-only {
-    display:block; position: absolute;
-    height:0; width:0; margin: 0; padding: 0;
-    border: none; overflow: hidden;
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
 }
-.container-error{
+
+.container-error {
     height: 100%;
     width: 100%;
 }
-.errorpage{
+
+.errorpage {
     margin-top: 20em;
     text-align: center;
 }

@@ -27,6 +27,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Logged in as {{ g.user['fName'] }}
+                            {{ user_id }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ url_for('index') }}">Home</a></li>
